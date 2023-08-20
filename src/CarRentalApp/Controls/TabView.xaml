@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CarRentalApp.Controls.TabView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="TabViewBackgroundColor">#26272D</Color>
+            
+            <Style x:Key="TabViewBorderStyle" TargetType="Border">
+                <Setter Property="StrokeShape" Value="RoundRectangle 90" />
+                <Setter Property="Background" Value="{StaticResource TabViewBackgroundColor}" />
+            </Style>
+            
+            <Style x:Key="TabItemIconStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Border
+        Style="{StaticResource TabViewBorderStyle}">
+        <Grid
+            ColumnDefinitions="*, *, *, *">
+            <Image
+                Source="home_icon.png"
+                Style="{StaticResource TabItemIconStyle}"/>
+            <Image 
+                Grid.Column="1"
+                Source="ticket_icon.png" 
+                Style="{StaticResource TabItemIconStyle}"/>
+            <Image
+                Grid.Column="2"
+                Source="calendar_icon.png"
+                Style="{StaticResource TabItemIconStyle}"/>
+            <Image 
+                Grid.Column="3"
+                Source="profile_icon.png"
+                Style="{StaticResource TabItemIconStyle}"/>
+        </Grid>
+    </Border>
+</ContentView>
