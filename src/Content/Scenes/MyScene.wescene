@@ -2468,7 +2468,7 @@ Items:
           X: 1.0
           Y: 1.0
           Z: 1.0
-      - !TeslaCar.Behaviors.CameraBehavior,TeslaCar
+      - !CarRentalApp.Behaviors.CameraBehavior,CarRentalApp
         Id: 50e536ff-b363-4b8a-b7b1-d4e6404d6e82
         IsEnabled: true
         TouchSensibility: 0.0
