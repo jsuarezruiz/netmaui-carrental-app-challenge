@@ -1,0 +1,55 @@
+!Evergine.Assets.Exporters.MaterialMetaFile,Evergine.Assets
+Id: bcad3070-d8ed-4c2f-88e7-322527b1b11a
+DefaultProfile:
+  ExcludeAsset: false
+  Name: null
+  Platform: Undefined
+ExportAsRaw: false
+MaterialInfo:
+  Id: fc927378-1362-4957-a882-3e0e8f7f70e9
+  ActiveDirectives: []
+  AllowInstancing: false
+  EffectID: dd86a555-371c-4c72-8cf3-c32d5219af74
+  Layer: da9e0221-f777-4e5a-96c2-df012f2d7bf2
+  OrderBias: 0
+  Parameters:
+    - Name: World
+      Type: Evergine.Mathematics.Matrix4x4,Evergine.Mathematics
+      ValueByteArray: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+    - Name: CameraPosition
+      Type: Evergine.Mathematics.Vector3,Evergine.Mathematics
+      ValueByteArray: AAAAAAAAAAAAAAAA
+    - Name: CameraNear
+      Type: System.Single
+      ValueByteArray: AAAAAA==
+    - Name: ViewProj
+      Type: Evergine.Mathematics.Matrix4x4,Evergine.Mathematics
+      ValueByteArray: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+    - Name: Exposure
+      Type: System.Single
+      ValueByteArray: AAAAAA==
+    - Name: EyeCount
+      Type: System.Int32
+      ValueByteArray: AAAAAA==
+    - Name: IblLuminance
+      Type: System.Single
+      ValueByteArray: AAAAAA==
+    - Name: CameraFar
+      Type: System.Single
+      ValueByteArray: AAAAAA==
+    - Name: MultiviewViewProj
+      Type: Evergine.Mathematics.Matrix4x4,Evergine.Mathematics
+      ValueByteArray: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+    - Name: MultiviewPosition
+      Type: Evergine.Mathematics.Vector4,Evergine.Mathematics
+      ValueByteArray: AAAAAAAAAAAAAAAAAAAAAA==
+    - Name: Intensity
+      Type: System.Single
+      ValueByteArray: AACAPw==
+  Samplers:
+    - ID: 7d1e2792-2031-42bb-a67c-0dbd282be12a
+      Name: TextureSampler
+  Textures:
+    - ID: 102292ae-a4e2-46be-aa6c-0b7e4a91fbd1
+      Name: Texture
+Profiles: {}

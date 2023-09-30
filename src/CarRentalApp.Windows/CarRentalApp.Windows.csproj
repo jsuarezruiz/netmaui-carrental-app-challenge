@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Forms" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2023.9.28.510" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarRentalApp\CarRentalApp.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="$(DefineConstants.Contains('EVERGINE_EDITOR'))">
+    <ProjectReference Include="..\CarRentalApp.Editor\CarRentalApp.Editor.csproj" />
+  </ItemGroup>
+</Project>

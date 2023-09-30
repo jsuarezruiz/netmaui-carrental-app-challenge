@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CarRentalApp.Views.Templates.BestCarItemTemplate"
+    xmlns:viewmodels="clr-namespace:CarRentalApp.ViewModels">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="BestCarBorderStyle" TargetType="Border">
+                <Setter Property="StrokeShape" Value="RoundRectangle 24"/>
+                <Setter Property="Background" Value="{StaticResource White}"/>
+                <Setter Property="StrokeThickness" Value="0"/> 
+                <Setter Property="HeightRequest" Value="200"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="Margin" Value="6"/>
+            </Style>
+            
+            <Style x:Key="BestCarImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="HeightRequest" Value="110" />
+                <Setter Property="VerticalOptions" Value="Start" />
+            </Style>
+            
+            <Style x:Key="BestCarNameStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            
+            <Style x:Key="BestCarLocationStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="FontSize" Value="11" />
+            </Style>
+            
+            <Style x:Key="BestCarDetailsStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            
+            <Style x:Key="BestCarIconStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Border
+        Style="{StaticResource BestCarBorderStyle}">
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer         
+                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:HomeViewModel}}, Path=GoToDetailsCommand}"
+                CommandParameter="{Binding .}"/>
+        </Border.GestureRecognizers>
+        <Border.Shadow>
+            <Shadow
+                Offset="2, 2"
+                Radius="6"
+                Opacity="0.25"/>
+        </Border.Shadow>
+        <Grid
+            RowDefinitions="Auto, Auto">
+            <Image 
+                Source="{Binding Image}"
+                Style="{StaticResource BestCarImageStyle}"/>
+            <Grid
+                Grid.Row="1"
+                RowDefinitions="Auto, Auto, Auto"
+                Padding="6">
+                <Label 
+                    Text="{Binding Name}"
+                    Style="{StaticResource BestCarNameStyle}"/>
+                <Grid
+                    Grid.Row="1"
+                    ColumnDefinitions="Auto, Auto"
+                    Margin="0, 6">
+                    <Label 
+                        Text="{Binding Location}"
+                        Style="{StaticResource BestCarLocationStyle}"/>
+                </Grid>
+                <Grid
+                    Grid.Row="2"
+                    ColumnDefinitions="Auto, Auto, Auto, *">
+                    <Image 
+                        Source="seat_icon.png"
+                        Style="{StaticResource BestCarIconStyle}"/>
+                    <Label 
+                        Grid.Column="1"
+                        Text="{Binding Seats, StringFormat='{0} seats'}"
+                        Style="{StaticResource BestCarDetailsStyle}"/>
+                    <Image
+                        Grid.Column="2"
+                        Source="dollar_icon.png"
+                        Style="{StaticResource BestCarIconStyle}"/>
+                    <Label 
+                        Grid.Column="3"
+                        Text="{Binding Price, StringFormat='${0}/hour'}"
+                        Style="{StaticResource BestCarDetailsStyle}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</ContentView>

@@ -1,0 +1,130 @@
+!Evergine.Assets.Exporters.ModelMetaFile,Evergine.Assets
+Id: e164b6ee-73b2-419c-8253-0bc99f8501b4
+Clips: []
+DefaultProfile:
+  ExcludeAsset: false
+  Name: null
+  Platform: Undefined
+ExportAnimations: true
+ExportAsRaw: false
+GenerateTangentSpace: true
+Profiles: {}
+Source:
+  Header:
+    Id: a5bedc37-587f-4f14-b1a4-9f2acaf62edf
+    IsCompressed: true
+  LastModified: 0001-01-01T00:00:00.0000000
+  ModelInfo:
+    Id: 646e2c42-8be7-41f5-8b08-4b7e9add6407
+    AnimationTracks: []
+    EmbeddedResources: null
+    Materials:
+      - Item1: Material.017
+        Item2: 55884fc3-cdab-4a99-b672-8fc4bc1193de
+      - Item1: Material.016
+        Item2: 708c4ccd-9b29-4449-ac15-224582587fbf
+      - Item1: Material.013
+        Item2: aac774fd-b48c-47be-98a0-c3c7f06dec53
+      - Item1: Material.012
+        Item2: 7ea99b5e-d983-44f8-a6c4-031f50218458
+      - Item1: Material.011
+        Item2: 00870553-33e8-4fe9-bc9c-6175f60978de
+      - Item1: Material.010
+        Item2: 6882df89-2278-44b1-8c04-54d533901fe4
+      - Item1: Material.009
+        Item2: 744dfcf8-63c6-4578-8cfa-aa9feb39430f
+      - Item1: Material.014
+        Item2: 1ebb2702-33a7-4015-84c8-4d599afed62a
+      - Item1: Material.008
+        Item2: 493ec39b-ad75-4970-a7f4-2fe769c4441e
+      - Item1: Material.004
+        Item2: 1baeb07f-41e0-44ed-a812-6cfc75a172f1
+      - Item1: Material.003
+        Item2: ef840173-c295-453c-a09b-07586a1f517e
+      - Item1: Material.007
+        Item2: 5f1ebce5-2f88-45b9-a036-9c29eeaf0fc5
+      - Item1: Material.005
+        Item2: ddd411b7-7964-46c3-a01e-e51505ec8093
+      - Item1: Material.002
+        Item2: 24ba6488-66aa-4630-87a7-bbe514ae5c83
+      - Item1: CAR_PAINT
+        Item2: 9249e9fe-ba0d-4e69-9e9c-0f429a3ee913
+      - Item1: chrome
+        Item2: 329f806d-b5d5-4d2f-8686-623d8b42e8c5
+      - Item1: Glass
+        Item2: 941fd088-8d0f-46d7-8d72-544b7020ca50
+      - Item1: PLASTIC
+        Item2: 39ec482a-86d3-476a-932a-7ff68f880c3c
+      - Item1: LED_PHARE
+        Item2: 5853c5f5-8968-4af3-b1d4-a1934c35d909
+      - Item1: Material.001
+        Item2: eea581b9-64a2-4871-9e14-6aae912ccbb5
+      - Item1: Material.015
+        Item2: 7c215cd3-c1b9-44e1-a0fa-375d321fbb6c
+    Nodes:
+      - Sketchfab_model
+      - Sketchfab_model.Tesla Model 3_fbx
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_013
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_013.Capot_013_Material_017_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_010
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_010.Capot_010_Material_016_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003.wheel_003_Material_013_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003.wheel_003_Material_012_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003.wheel_003_Material_011_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003.wheel_003_Material_010_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_003.wheel_003_Material_009_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_003
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_003.cal_003_Material_014_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002.wheel_002_Material_013_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002.wheel_002_Material_012_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002.wheel_002_Material_011_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002.wheel_002_Material_010_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_002.wheel_002_Material_009_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_002
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_002.cal_002_Material_014_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_001
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal_001.cal_001_Material_014_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001.wheel_001_Material_013_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001.wheel_001_Material_012_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001.wheel_001_Material_011_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001.wheel_001_Material_010_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel_001.wheel_001_Material_009_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_009
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_009.Capot_009_Material_008_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_012
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_012.Capot_012_Material_004_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_011
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_011.Capot_011_Material_003_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_008
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_008.Capot_008_Material_007_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_007
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_007.Capot_007_Material_005_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot.Capot_Material_002_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_001
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_001.Capot_001_CAR PAINT_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_002
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_002.Capot_002_chrome_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_003
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_003.Capot_003_Glass_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_004
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_004.Capot_004_PLASTIC_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_005
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_005.Capot_005_LED PHARE_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_006
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.Capot_006.Capot_006_Material_001_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.cal.cal_Material_014_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel.wheel_Material_013_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel.wheel_Material_012_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel.wheel_Material_011_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel.wheel_Material_010_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.wheel.wheel_Material_009_0
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.int
+      - Sketchfab_model.Tesla Model 3_fbx.RootNode.int.int_Material_015_0
+SwapWindingOrder: false

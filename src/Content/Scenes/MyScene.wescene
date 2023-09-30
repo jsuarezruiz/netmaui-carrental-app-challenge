@@ -1,0 +1,2574 @@
+!Evergine.Framework.Assets.AssetSources.Entities.SceneModel,Evergine.Framework
+Items:
+  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+    Name: SunLight
+    Tag: null
+    IsEnabled: true
+    IsStatic: false
+    Components:
+      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+        Id: d73a976d-b2ab-4572-9ec9-351ded5f6fd3
+        IsEnabled: true
+        LocalOrientation:
+          W: -0.312183172
+          X: 0.606009305
+          Y: -0.434237063
+          Z: -0.588840067
+        LocalPosition:
+          X: 0.0
+          Y: 2.39560914
+          Z: 2.85579148E-07
+        LocalScale:
+          X: 1.0
+          Y: 1.0
+          Z: 1.0
+      - !Evergine.Framework.Graphics.PhotometricDirectionalLight,Evergine.Framework
+        Id: 5f6768ca-a7e6-4ab7-82b2-d9b3c42d111f
+        Color:
+          A: 0
+          B: 229
+          G: 241
+          R: 249
+        ColorByTemperature: true
+        DebugMode: false
+        GammaDistribution: 0.800000012
+        Illuminance: 3.0
+        Intensity: 3.0
+        IsEnabled: true
+        IsShadowEnabled: true
+        LinearColor:
+          A: 0.0
+          B: 0.7890625
+          G: 0.880859375
+          R: 0.947753906
+        ShadowBias: 0.00499999989
+        ShadowDistance: 80.0
+        ShadowOpacity: 0.968924165
+        SplitDistance:
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+        Temperature: 6900.0
+      - !Evergine.Framework.Graphics.SunComponent,Evergine.Framework
+        Id: 6f2b70f3-a505-49a6-9454-130b04d48cd3
+        IsEnabled: true
+    Children: []
+    Id: 3f7df33e-e1b9-411e-9601-362975b0c871
+  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+    Name: SkyAtmosphere
+    Tag: Skybox
+    IsEnabled: true
+    IsStatic: false
+    Components:
+      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+        Id: 34fe1903-039d-4944-bc32-d2226ad76267
+        IsEnabled: true
+        LocalOrientation:
+          W: 1.0
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        LocalPosition:
+          X: -0.0263725221
+          Y: 0.0
+          Z: 0.0
+        LocalScale:
+          X: 1.0
+          Y: 1.0
+          Z: 1.0
+      - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+        Id: bb44cd62-4d92-418a-8a42-bbc2ed2b6f07
+        AsignedTo: Default
+        IsEnabled: true
+        Material: bcad3070-d8ed-4c2f-88e7-322527b1b11a
+        UseCopy: false
+      - !Evergine.Components.Graphics3D.SphereMesh,Evergine.Components
+        Id: 3ef37285-f016-4173-bbf0-278ec1624224
+        Diameter: 1.0
+        IsEnabled: true
+        Tessellation: 32
+        UMirror: false
+        VMirror: false
+      - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+        Id: 1665742b-454f-4cda-9b9b-df6698342e5d
+        DebugBoundingbox: true
+        IsCullingEnabled: false
+        IsEnabled: true
+        OrderBias: 0
+        RenderFlags: CastShadows
+      - !Evergine.Components.Environment.AtmosphereController,Evergine.Components
+        Id: 18617d72-081f-4fb6-bbac-b3dfbf177924
+        AtmosphereRadiusInKm: 6471.0
+        IsEnabled: true
+        MiePreferredScatteringDirection: 0.758000016
+        MieScaleHeight: 1200.0
+        MieScatteringCoefficient: 21.0
+        ModifySunColor: true
+        PlanetRadiusInKm: 6371.0
+        RayleighScaleHeight: 8000.0
+        RayleighScatteringCoefficient:
+          X: 5.5
+          Y: 13.0
+          Z: 22.3999996
+        SunDiskEnabled: true
+        SunDiskSize: 0.0199999996
+        SunIntensity: 22.0
+        UpdateOrder: 0.5
+    Children: []
+    Id: 6a094fea-e84d-4cbc-bb6e-60ccc60b5693
+  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+    Name: Car
+    Tag: null
+    IsEnabled: true
+    IsStatic: false
+    Components:
+      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+        Id: bf49ce00-314d-49bc-b309-ccfe6794566f
+        IsEnabled: true
+        LocalOrientation:
+          W: 1.0
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        LocalPosition:
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        LocalScale:
+          X: 1.0
+          Y: 1.0
+          Z: 1.0
+    Children:
+      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+        Name: tesla_model_3_glb
+        Tag: null
+        IsEnabled: true
+        IsStatic: false
+        Components:
+          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+            Id: fa7f6a25-ccd9-448b-88ab-af775632ccce
+            IsEnabled: true
+            LocalOrientation:
+              W: 0.707106769
+              X: -0.707106769
+              Y: 0.0
+              Z: 0.0
+            LocalPosition:
+              X: -0.0733605027
+              Y: 0.278234184
+              Z: 0.338886619
+            LocalScale:
+              X: 0.00486849481
+              Y: 0.00486849481
+              Z: 0.00486849481
+        Children:
+          - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+            Name: Tesla Model 3_fbx
+            Tag: null
+            IsEnabled: true
+            IsStatic: false
+            Components:
+              - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                Id: 33d5c42d-3995-43cb-8846-555a06334979
+                IsEnabled: true
+                LocalOrientation:
+                  W: 0.707106769
+                  X: 0.707106769
+                  Y: 0.0
+                  Z: 0.0
+                LocalPosition:
+                  X: 0.0
+                  Y: 0.0
+                  Z: 0.0
+                LocalScale:
+                  X: 1.0
+                  Y: 1.0
+                  Z: 1.0
+            Children:
+              - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                Name: RootNode
+                Tag: null
+                IsEnabled: true
+                IsStatic: false
+                Components:
+                  - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                    Id: cb2e5b11-b5bc-47c7-bcac-4db93524120c
+                    IsEnabled: true
+                    LocalOrientation:
+                      W: 1.0
+                      X: 0.0
+                      Y: 0.0
+                      Z: 0.0
+                    LocalPosition:
+                      X: 0.0
+                      Y: 0.0
+                      Z: 0.0
+                    LocalScale:
+                      X: 1.0
+                      Y: 1.0
+                      Z: 1.0
+                Children:
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_013
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 55863dd9-18cb-4757-92ea-885af5e67b94
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.52892232
+                          Y: 80.3779144
+                          Z: -64.194603
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_013_Material_017_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 53c1e846-d123-4744-8446-7b75077b0529
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: cf6ceec3-ea16-4264-9eac-8cb9f6dba161
+                            AsignedTo: Material.017
+                            IsEnabled: true
+                            Material: 55884fc3-cdab-4a99-b672-8fc4bc1193de
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 78115047-28b7-4072-a240-a6e7cd1ff78b
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_013_Material_017_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 032e018d-6340-4644-8a4b-953bc27b1dc1
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: b32502e5-63a5-48d7-97ec-593e2abe8851
+                    Id: 6f7c8ad7-800d-453b-aeb9-faf852a9d41b
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_010
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: f911ac9b-317f-411a-92a5-fe600166efa7
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.44837856
+                          Y: 46.391571
+                          Z: -67.6266632
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_010_Material_016_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e304c7e1-f62d-4f2e-a562-25026db3017a
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 76ddf0ad-d449-430f-bd07-bee4e4d696b1
+                            AsignedTo: Material.016
+                            IsEnabled: true
+                            Material: 708c4ccd-9b29-4449-ac15-224582587fbf
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 21507c24-39de-443e-a4d7-4a3a8b811dfc
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_010_Material_016_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 237f6dad-880c-4f02-a3de-e4776e5810f5
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 75639a20-d954-4dcb-942a-f27fd89753ea
+                    Id: 7afa8208-70bf-49d8-ab39-beebfdf982a2
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: wheel_003
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 3dc2756a-47c8-4713-9ea0-f808dbd02c69
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.707106709
+                          X: -0.707106829
+                          Y: 0.0
+                          Z: 0.0
+                        LocalPosition:
+                          X: 101.125633
+                          Y: -11.6449442
+                          Z: -263.103546
+                        LocalScale:
+                          X: 1.44065607
+                          Y: 1.44065607
+                          Z: 1.44065607
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_003_Material_013_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 61f946ed-4e7e-4037-86c5-58d51362fb1b
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: f9869756-006f-4add-85d8-74278799281f
+                            AsignedTo: Material.013
+                            IsEnabled: true
+                            Material: aac774fd-b48c-47be-98a0-c3c7f06dec53
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: a051c135-6276-4f65-83d3-a1005d4cffac
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_003_Material_013_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 635e8720-bf30-43b1-a7f6-de7dd3f796bc
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: c6fa9d01-c6da-4c69-b22e-46dedbfc653f
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_003_Material_012_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 1b205eff-2147-4991-85ee-5a5e30033e92
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: e7b7aa69-2a0e-40fe-8c09-990379460d9f
+                            AsignedTo: Material.012
+                            IsEnabled: true
+                            Material: 7ea99b5e-d983-44f8-a6c4-031f50218458
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 6da4a9d6-6b16-42a5-ae49-f3e8add23af4
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_003_Material_012_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 85fff848-811c-4bde-b7c2-9ff00b4faba7
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: f52d6297-fbee-47d5-a2e1-a565239117c1
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_003_Material_011_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 7dca3340-2dfe-4d6f-9600-ab1e88a37360
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: ce21671a-8eb0-4436-990e-2dd408f2d902
+                            AsignedTo: Material.011
+                            IsEnabled: true
+                            Material: 00870553-33e8-4fe9-bc9c-6175f60978de
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: b21aba05-0bc2-4832-ade1-5db6ef45f32e
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_003_Material_011_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 96ec2fca-b253-48ec-8973-87c8d622e945
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: bd01f7fb-e252-4bab-b038-5070a0547d62
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_003_Material_010_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 3989b4f9-ee84-42b6-9620-458ac6df4d4e
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 718fa738-31f4-4650-8848-54988f5b19fa
+                            AsignedTo: Material.010
+                            IsEnabled: true
+                            Material: 6882df89-2278-44b1-8c04-54d533901fe4
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 9637c67e-3ea6-4e18-8631-15197bf830e9
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_003_Material_010_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: e3568891-4f70-433e-9ee4-9dc7d13884a4
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: dbd56673-378d-4df0-8088-ce2c5c397cb0
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_003_Material_009_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: c0806e99-4444-4a57-a385-3836ff3f8c68
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 9aa1313e-5579-418f-a3dd-5c53b0c860b5
+                            AsignedTo: Material.009
+                            IsEnabled: true
+                            Material: 744dfcf8-63c6-4578-8cfa-aa9feb39430f
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: b9974dd0-4e2f-489c-8296-bffd1d9f6687
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_003_Material_009_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: b81dfa23-e178-4635-957f-0d403c37905e
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 8f4aa199-d6de-4b0f-b2ad-a71264bb70e1
+                    Id: 9bae88ef-478d-4507-951f-fc14473fbd68
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: cal_003
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 38cce598-c51b-47a4-8621-a130355a8538
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.999842823
+                          X: 0.0177285578
+                          Y: 0.0
+                          Z: 0.0
+                        LocalPosition:
+                          X: 103.397476
+                          Y: -11.6449442
+                          Z: -263.103546
+                        LocalScale:
+                          X: 1.32792771
+                          Y: 1.32792807
+                          Z: 1.32792807
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: cal_003_Material_014_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 6548201a-bdd0-4605-8b14-f6c5749d3299
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: a6a817fa-0971-49a5-a9c8-07620a56a7f6
+                            AsignedTo: Material.014
+                            IsEnabled: true
+                            Material: 1ebb2702-33a7-4015-84c8-4d599afed62a
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: ee46abcc-b6a3-4807-a11a-9bd7b20f3b76
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: cal_003_Material_014_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: a119d77e-8e66-4280-9069-c6da9d929765
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 924842f0-4516-4843-b2cd-eee4907f21d7
+                    Id: 18171786-5461-4c80-bf14-abf8ec7f3c52
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: wheel_002
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 179206d1-f921-45c6-bbbf-a610a18d565e
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 2.51214747E-15
+                          X: 6.18172393E-08
+                          Y: 0.70710665
+                          Z: 0.707106888
+                        LocalPosition:
+                          X: -111.330177
+                          Y: -11.6449442
+                          Z: -263.103546
+                        LocalScale:
+                          X: 1.44065607
+                          Y: 1.44065607
+                          Z: 1.44065607
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_002_Material_013_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 6522ad8d-532f-48da-8c5b-55af728de7cf
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 163f7f7a-240e-4a7f-8e14-d9e260d00594
+                            AsignedTo: Material.013
+                            IsEnabled: true
+                            Material: aac774fd-b48c-47be-98a0-c3c7f06dec53
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 1f97e647-1764-4884-aa30-094a0aa56308
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_002_Material_013_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 58027fbf-8ffb-42b1-a884-81a6326b2f7b
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 425899f0-1d24-4526-aa9c-837142c7954a
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_002_Material_012_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e4e54853-a144-41c4-a78d-5b9b1294b43c
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 60212bb0-6c6b-4444-a418-5f6a9a6ebb95
+                            AsignedTo: Material.012
+                            IsEnabled: true
+                            Material: 7ea99b5e-d983-44f8-a6c4-031f50218458
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 542d5c8d-3368-4d0f-9839-4a671dc7c7b6
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_002_Material_012_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 79c1abbc-1042-400c-b7a8-fb845a30f73e
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: d708e1b7-0088-4bfd-b85d-9d27b6020be7
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_002_Material_011_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 54879338-869e-40c5-9596-472f8b1f19ff
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 996cf54e-91ae-4fea-9aa5-fb136a4f99bb
+                            AsignedTo: Material.011
+                            IsEnabled: true
+                            Material: 00870553-33e8-4fe9-bc9c-6175f60978de
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 585ce7c0-f304-44ac-8fe5-e1f761e448e8
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_002_Material_011_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: d6728b6d-2d33-4511-976b-9d038cfa2c96
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: d0dbaa88-ab44-4edb-948d-2fc097359224
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_002_Material_010_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 61998d00-9f8f-43e3-802a-16ba7b62e4a8
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 198fe28e-50f7-4c74-832a-82d216b9311d
+                            AsignedTo: Material.010
+                            IsEnabled: true
+                            Material: 6882df89-2278-44b1-8c04-54d533901fe4
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 29905d0d-5b1f-4ecd-bf9d-0f83b4cd208f
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_002_Material_010_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 0b6c976e-6d6f-4bcf-b4a8-2a05f45be83d
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 4d727b45-304b-4e8f-92d0-5e925e6c24e3
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_002_Material_009_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 4f6e8ad9-da3e-4849-9b27-339dd51538e1
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: a0959380-4a5a-41b5-b4c7-546ac7e459b6
+                            AsignedTo: Material.009
+                            IsEnabled: true
+                            Material: 744dfcf8-63c6-4578-8cfa-aa9feb39430f
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 7d404a43-749d-40d1-982d-6ccce8a533a0
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_002_Material_009_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: ef42b0e8-5582-4885-8507-bef14f415b3e
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 9e57a07b-3fa9-4fa1-b7c7-de0d32b1cc09
+                    Id: 8bfe56b9-22e2-4859-a4b8-10cef80687e6
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: cal_002
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 9a3d64d3-2ef2-4a53-921a-6a2e365dff23
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.706884503
+                          X: 0.0250753909
+                          Y: 0.0
+                          Z: 0.0
+                        LocalPosition:
+                          X: -113.602158
+                          Y: -11.6449442
+                          Z: -263.103546
+                        LocalScale:
+                          X: 1.32790005
+                          Y: 1.32792807
+                          Z: 1.32792807
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: cal_002_Material_014_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 55f949bf-0361-41e0-9700-6ec0dea95947
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: d5ced058-a2f5-4ddd-917d-9b342da84f20
+                            AsignedTo: Material.014
+                            IsEnabled: true
+                            Material: 1ebb2702-33a7-4015-84c8-4d599afed62a
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: d4ddf6cb-3ffb-4e66-8e0f-19c533dd37be
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: cal_002_Material_014_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: a1d1f048-c221-4d42-8089-c114d9c207c1
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 783ea709-1b7f-4e3f-b5a2-20e79d8a048b
+                    Id: 1c0bd91d-5895-4961-aee8-2a0b11370d1c
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: cal_001
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: e2dea1bc-f439-4fa0-b70a-f78fd33bdb0e
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.0180291273
+                          X: -0.00149759185
+                          Y: -0.00285553304
+                          Z: 0.706988156
+                        LocalPosition:
+                          X: -108.912491
+                          Y: -9.9804287
+                          Z: 127.590546
+                        LocalScale:
+                          X: 1.32790005
+                          Y: 1.32792807
+                          Z: 1.32792819
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: cal_001_Material_014_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 74d26f79-e3cf-4e8a-abd9-40143c6f965a
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: d6d8ac03-58ab-4ce2-a416-2d8b8db84884
+                            AsignedTo: Material.014
+                            IsEnabled: true
+                            Material: 1ebb2702-33a7-4015-84c8-4d599afed62a
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: e6c08c4a-9aa8-4ebf-a45e-73eabda17200
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: cal_001_Material_014_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 6bd7a95a-a38f-485d-8ff4-7ce72f5406a2
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 41dac2b8-d2a4-4763-88c0-172360ebd393
+                    Id: 95b69be7-3e70-41f7-bf7e-4a6397f26146
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: wheel_001
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: e9fe60c2-1c44-4b3a-a00d-d56d2c56cd92
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.110615723
+                          X: -0.11061573
+                          Y: 0.698401153
+                          Z: 0.698401153
+                        LocalPosition:
+                          X: -106.751694
+                          Y: -9.9804287
+                          Z: 128.292633
+                        LocalScale:
+                          X: 1.44065607
+                          Y: 1.44065607
+                          Z: 1.44065607
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_001_Material_013_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: ff327585-0838-4219-b674-c0d3326cc1e9
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 48115813-ab19-4b14-84c8-738140e040e3
+                            AsignedTo: Material.013
+                            IsEnabled: true
+                            Material: aac774fd-b48c-47be-98a0-c3c7f06dec53
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 3755b83f-c2e5-4d30-b7ee-9beae16c6c02
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_001_Material_013_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 392a670c-8eaa-41e9-b0ec-f176614ea59d
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 814bda3f-88d7-4c69-a1d2-b6172f4f9388
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_001_Material_012_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 1c802a74-915d-4bc3-ad1b-7b3029c8042a
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: b2ccb607-c4dc-4433-8edb-76227732c391
+                            AsignedTo: Material.012
+                            IsEnabled: true
+                            Material: 7ea99b5e-d983-44f8-a6c4-031f50218458
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 823666a2-b942-4718-9afe-303981ea84aa
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_001_Material_012_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: d44d5dda-b1da-4e95-b95a-c07e3896e840
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 7265df22-9971-4bfe-a9c8-2053110599e4
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_001_Material_011_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 503480c4-9228-4b19-9aac-b87563afbeb1
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 9fb106c2-03ad-4645-838e-09bb047bc176
+                            AsignedTo: Material.011
+                            IsEnabled: true
+                            Material: 00870553-33e8-4fe9-bc9c-6175f60978de
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: f958ee39-a37c-4652-a309-aa81ee64f669
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_001_Material_011_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 1abe753e-f896-4c2d-9761-1eb7cfc9e727
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 45b0c66b-d9e0-4fa1-b91b-e1802acb36ac
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_001_Material_010_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: ef519455-98f8-4c21-b958-53abcb55350a
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 0c8021ee-5ad7-45e1-a4d5-91e98f31a69b
+                            AsignedTo: Material.010
+                            IsEnabled: true
+                            Material: 6882df89-2278-44b1-8c04-54d533901fe4
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 42c338a9-68b6-4e6c-825e-21cf72530505
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_001_Material_010_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 9f5bffe3-38c8-4f60-a858-232a8897d828
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: bbcb0b7c-7ac6-4ae5-bb76-2798e7ede704
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_001_Material_009_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 5fe45091-6d99-4c69-81f2-4c163693782a
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 4731f98c-3b86-4d0a-900a-b5c64f0cc4f5
+                            AsignedTo: Material.009
+                            IsEnabled: true
+                            Material: 744dfcf8-63c6-4578-8cfa-aa9feb39430f
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: aacd746e-986a-41f4-b3c9-9b6e7856a699
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_001_Material_009_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 21932319-a709-47c2-8106-fa5ac726f230
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: c763f164-19f8-492f-adb0-c575b7f16a4f
+                    Id: a034e0f3-2733-4a4f-ad28-1ab4d8889c61
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_009
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 03dc144b-5805-4dea-8b51-fc8e35514bda
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -0.563752294
+                          Y: -15.4378204
+                          Z: 210.501526
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_009_Material_008_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: fedbae20-7e1c-4a73-b525-6d51cf4a7416
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: af115243-b312-4c89-bce6-9135b143ed1f
+                            AsignedTo: Material.008
+                            IsEnabled: true
+                            Material: 493ec39b-ad75-4970-a7f4-2fe769c4441e
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 59836694-f187-4e31-80a8-c75da74a1eb0
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_009_Material_008_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: eff8bf2e-4bae-41d0-bffd-f8086ab70505
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: d36adb70-5d4d-4dd0-a995-7a0d5ea6c175
+                    Id: 9b34b1a5-6ebd-4deb-906a-4ae2e4a2cf34
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_012
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: d05c6af0-916d-4e4f-998c-706992aea452
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -1.01004803
+                          Y: 43.2421112
+                          Z: 184.278778
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_012_Material_004_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: bb5d2f48-63d7-4e96-8b88-31060badee17
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 39edf762-d821-490e-a3ea-4deb919d74e8
+                            AsignedTo: Material.004
+                            IsEnabled: true
+                            Material: 1baeb07f-41e0-44ed-a812-6cfc75a172f1
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: db6d06e5-1ef0-49b3-aa22-cbde4ef6e66e
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_012_Material_004_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 0ecd64e5-3d13-428a-90e4-aa38a46c2d88
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 173963aa-7c4d-4cb1-97af-c5470d458013
+                    Id: 9f14811c-92c3-43f8-9b63-bebe71d433bf
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_011
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 4db216eb-193c-4353-8ffb-22814d612434
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -2.86740327
+                          Y: 74.3629913
+                          Z: 2.30374932
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_011_Material_003_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 24328f56-bea1-448a-bb26-7ce50fd5e827
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: b6d2d4a4-ad57-40cb-9182-a0230fc5f0c1
+                            AsignedTo: Material.003
+                            IsEnabled: true
+                            Material: ef840173-c295-453c-a09b-07586a1f517e
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: f2bb9ad6-fbe5-4c61-a6b0-2c6196e19695
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_011_Material_003_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 864821bd-e978-42ec-ad13-507c47df6059
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 55debded-38dc-4f5a-9d18-b046209279a7
+                    Id: 0bcdf957-7a20-4a71-a6d8-bda5e97aa1a1
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_008
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: b7069546-3ebf-4ac2-92b5-a7662ff95d31
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -6.20237541
+                          Y: -8.40746784
+                          Z: -370.614319
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_008_Material_007_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 1ca39ae5-83b5-4b10-bae6-9d0eefd5f3b2
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 8b51920b-94f7-4d04-910f-8a72998a412f
+                            AsignedTo: Material.007
+                            IsEnabled: true
+                            Material: 5f1ebce5-2f88-45b9-a036-9c29eeaf0fc5
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: e0598f70-4b21-4aa5-ba65-a206cfa7b860
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_008_Material_007_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 6cb405e2-4853-4343-bee9-d4e0169d1e76
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: f76358cb-529a-4b92-9fff-dc1efd25e738
+                    Id: 8a6f6ec4-eedc-4091-8565-e33069fe8300
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_007
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: f40d401c-f16b-4505-8296-ab2914ce6ae9
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.59617138
+                          Y: 49.9689293
+                          Z: -81.2866135
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_007_Material_005_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e840df11-9649-4d36-8801-d3cbade1bb0c
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 2ad5d118-c916-4740-ada0-d8d454738f8f
+                            AsignedTo: Material.005
+                            IsEnabled: true
+                            Material: ddd411b7-7964-46c3-a01e-e51505ec8093
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: f2668c0a-bf5e-4968-9344-94a758edac6c
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_007_Material_005_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: f10952c6-fffe-4967-b88e-4f7539e3dc49
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: c324da96-3a5b-4c93-b4c9-9d88f51c6ad5
+                    Id: 18eaf113-2f3e-4847-aaaa-cd2475c393ce
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 2c7f25a7-748d-4de6-bd73-2a88f6e307e3
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.84128642
+                          Y: 69.7486191
+                          Z: -100.531479
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_Material_002_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: ea8e874e-25d5-4fed-a221-22fcc82bcb06
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 253c9808-5222-44d0-a12e-b5b5e44b7e05
+                            AsignedTo: Material.002
+                            IsEnabled: true
+                            Material: 24ba6488-66aa-4630-87a7-bbe514ae5c83
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: a93af8fc-1375-4df0-a3a5-0274dc0e97f1
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_Material_002_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 82836b3e-fd4d-452b-9dc9-724e1e3876b2
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: b25bcd10-9148-48e4-a693-4ad9066b973f
+                    Id: 9e9f1c44-a240-4052-aac4-e5dd3a471636
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_001
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: adb63908-2eb7-43cc-9d2b-2e5cdf106407
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.56923294
+                          Y: 50.8299522
+                          Z: -78.2108994
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_001_CAR PAINT_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 181fcf3b-a325-4c83-a509-40c8e3a9e1b1
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 5372a8b8-5163-498f-89bf-5c1b2b3b0c1a
+                            AsignedTo: CAR_PAINT
+                            IsEnabled: true
+                            Material: 9249e9fe-ba0d-4e69-9e9c-0f429a3ee913
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: acff058b-72d2-491f-8e58-e1d5eab612c9
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_001_CAR PAINT_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 8cd6c5cd-9a29-443d-9a5f-316e2a2a0728
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: ee83f930-3ba9-43d7-b805-20f901df2089
+                    Id: 24242123-6e5a-443c-8ea9-e155614588a8
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_002
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: dfccaa2f-98d6-43cb-ba09-a917c0c7e688
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.20855927
+                          Y: 63.2512817
+                          Z: -36.7245255
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_002_chrome_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: ed1f6cac-218f-4f18-b63f-ee3a3cc47888
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 0c3e9d03-ee9a-47cb-85e1-c44dc552cc21
+                            AsignedTo: chrome
+                            IsEnabled: true
+                            Material: 329f806d-b5d5-4d2f-8686-623d8b42e8c5
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 0e87fd6a-dc7c-4a3c-91b4-008da6acd700
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_002_chrome_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: db710715-6dc4-441e-84a6-c445c8b82390
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 288618d5-6e1f-4218-a455-878aeb9c72ff
+                    Id: dcafea7f-4cf9-4d93-bf91-c1cb3424417b
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_003
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: e73a6587-0384-44aa-a574-88565eeaf994
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.52892232
+                          Y: 80.3779144
+                          Z: -64.194603
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_003_Glass_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 16ddaf53-93ea-45c4-bf94-07eef0dafc13
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 227536ee-2ee4-4305-acbe-4d818632b2f3
+                            AsignedTo: Glass
+                            IsEnabled: true
+                            Material: 941fd088-8d0f-46d7-8d72-544b7020ca50
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 17c48727-a14f-4595-8077-1e08ab83c350
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_003_Glass_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 3c81ebb8-ab83-47e5-87b7-a3341e67e93f
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 2d2c7ef4-830f-47e9-87fa-5a8c3c055066
+                    Id: 6c222674-9cec-41fc-9075-d6700f158487
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_004
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 3e02d2f0-a9c4-4878-bdd3-7e81eeee5eda
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -3.44837856
+                          Y: 46.391571
+                          Z: -67.6266632
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_004_PLASTIC_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e99b9c38-9839-4d0f-b09b-dddcc7cc8be1
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 12f8293e-3d8b-4a54-bf23-353d5bc1e5c8
+                            AsignedTo: PLASTIC
+                            IsEnabled: true
+                            Material: 39ec482a-86d3-476a-932a-7ff68f880c3c
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 877aee8e-e577-4b82-bda7-354179bea2cf
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_004_PLASTIC_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: bbcafc02-c6c1-4efa-b58f-2ecdc7d6c16c
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 7f505ab5-405d-44f4-98ca-0a25e1cb5e7f
+                    Id: 26ff51e9-0bc9-4fef-991d-1fd71a277689
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_005
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 3b79605b-dfff-4009-8bc4-04a693e99664
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -0.959324479
+                          Y: 26.8566399
+                          Z: 184.075134
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_005_LED PHARE_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: b7f7be47-2c5a-433e-b505-0b7612fc3246
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 68feeb47-078e-49e5-ae60-86b83957706b
+                            AsignedTo: LED_PHARE
+                            IsEnabled: true
+                            Material: 5853c5f5-8968-4af3-b1d4-a1934c35d909
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 03542ee7-aa8d-459b-9b6b-a06932d1f790
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_005_LED PHARE_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: da74dfe7-6b04-455c-ab3b-4944fbf051ad
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: c1515782-ef7d-4c97-9f36-9be995a60d96
+                    Id: 255adebd-5cf3-43c1-9a53-50fdfe107513
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: Capot_006
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: da9cc0e7-6f67-40c6-846e-273c958bc081
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.704169095
+                          X: -0.710014045
+                          Y: 0.00225818972
+                          Z: 0.0045604459
+                        LocalPosition:
+                          X: -0.494756937
+                          Y: -15.636507
+                          Z: 218.029816
+                        LocalScale:
+                          X: 98.9811401
+                          Y: 98.9811325
+                          Z: 98.9811401
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: Capot_006_Material_001_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: f115f24f-ff5e-4ea4-9677-0bddf0fda9f9
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: fd35ca25-72a9-4d09-a83c-ff7513f7f9d4
+                            AsignedTo: Material.001
+                            IsEnabled: true
+                            Material: eea581b9-64a2-4871-9e14-6aae912ccbb5
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 875a2623-6d2e-463f-8906-d707cc896c81
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: Capot_006_Material_001_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 82233579-af3d-4dce-9696-4eeb78077733
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 6636ee22-e1fd-45e7-bbe1-0249bafa4759
+                    Id: fa5b2b75-0978-45e8-a343-c234b52bb92e
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: cal
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: e78ded39-2a55-47ee-80d9-657fd56ca8e7
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.0817609876
+                          X: 0.984298408
+                          Y: -0.0129497377
+                          Z: 0.155897588
+                        LocalPosition:
+                          X: 106.782127
+                          Y: -9.9804287
+                          Z: 128.292603
+                        LocalScale:
+                          X: 1.32792783
+                          Y: 1.32792807
+                          Z: 1.32792819
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: cal_Material_014_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: eddb4699-bdce-4075-b586-bbd112d629f8
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: f9ed6edb-3ea0-4738-a314-64d396586714
+                            AsignedTo: Material.014
+                            IsEnabled: true
+                            Material: 1ebb2702-33a7-4015-84c8-4d599afed62a
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 1fbc7710-5a8b-4882-bfaa-acde5e71fd8e
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: cal_Material_014_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: e0fcd291-b639-46dc-bf28-589270226303
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 85dacaf2-e4df-431d-9433-76f8d2a73766
+                    Id: 6fd96a39-8147-4e17-9a3c-7af9c0981f4d
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: wheel
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 245ab88b-a01e-4e9b-b2f5-018ee6b61cbf
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.698401093
+                          X: -0.698401153
+                          Y: -0.110615879
+                          Z: -0.110615902
+                        LocalPosition:
+                          X: 104.621468
+                          Y: -9.9804287
+                          Z: 127.590561
+                        LocalScale:
+                          X: 1.44065607
+                          Y: 1.44065607
+                          Z: 1.44065607
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_Material_013_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e69b3cbd-4146-4b0b-812e-7f945644a357
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 04d37e35-eeb4-4fd6-8ac7-71eedd173470
+                            AsignedTo: Material.013
+                            IsEnabled: true
+                            Material: aac774fd-b48c-47be-98a0-c3c7f06dec53
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 9e4feeae-d6e4-4e06-bf98-eb9b1648c81a
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_Material_013_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: bc1289e4-2cd6-4648-896e-11426d0623c6
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 29593a99-99f7-46b4-be4f-588191cb1868
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_Material_012_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 5d9cb510-fff2-4acb-89eb-89fc73df57ea
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: e4481bc0-b3c7-4fbd-a3b9-f406332e5484
+                            AsignedTo: Material.012
+                            IsEnabled: true
+                            Material: 7ea99b5e-d983-44f8-a6c4-031f50218458
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 5d74da58-8211-45fe-b652-acac2e9b4ebe
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_Material_012_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 8404395e-578b-45ac-bbe8-cfaf4d591f97
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 08addf01-ba28-4420-8692-eecf40b7b3cf
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_Material_011_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: e8c21cfb-5181-4611-adb0-9409d458a4ef
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 79456b72-2a13-4227-8c46-5a056168562a
+                            AsignedTo: Material.011
+                            IsEnabled: true
+                            Material: 00870553-33e8-4fe9-bc9c-6175f60978de
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 9b5755b7-2f04-41b1-a501-c7591c92e067
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_Material_011_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 91ee2c9c-51f6-48c8-8e81-2a1d11ffe9cb
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: 8384b85c-6c6b-4fea-b844-071b8bef3f4d
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_Material_010_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: 0c633718-c3b1-46cf-bfbe-d3a5549a4d43
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: d5ad5912-5f03-44f4-9a50-67eed26b410e
+                            AsignedTo: Material.010
+                            IsEnabled: true
+                            Material: 6882df89-2278-44b1-8c04-54d533901fe4
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 659f9f6b-2067-4eba-82ab-1643bbe435e3
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_Material_010_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: cb79c672-a78d-488c-9268-248b04e35faa
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: a1deeb0e-bf0f-4b6a-914b-a0915fbdc87c
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: wheel_Material_009_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: b64f93ab-95fa-4c0c-95cc-78fe045ea3cf
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 2e6ad03a-7e6a-4b80-95e8-f349cd1b356d
+                            AsignedTo: Material.009
+                            IsEnabled: true
+                            Material: 744dfcf8-63c6-4578-8cfa-aa9feb39430f
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: a01430d3-cca3-48ac-802f-af133567b6e2
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: wheel_Material_009_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 42f78f42-a6a4-4c5a-862f-398dbc432fb7
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: d4b81029-948f-403d-8892-4cfae0fe9a9a
+                    Id: 53685edd-6c44-4fea-8038-c22f69b05df4
+                  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                    Name: int
+                    Tag: null
+                    IsEnabled: true
+                    IsStatic: false
+                    Components:
+                      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                        Id: 5703194f-6e63-41f6-bf6c-73fe0f8ceb82
+                        IsEnabled: true
+                        LocalOrientation:
+                          W: 0.707106709
+                          X: -0.707106829
+                          Y: 0.0
+                          Z: 0.0
+                        LocalPosition:
+                          X: -4.28598022
+                          Y: 43.6621742
+                          Z: -72.5753632
+                        LocalScale:
+                          X: 3.53612685
+                          Y: 3.53612685
+                          Z: 3.53612685
+                    Children:
+                      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+                        Name: int_Material_015_0
+                        Tag: null
+                        IsEnabled: true
+                        IsStatic: false
+                        Components:
+                          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+                            Id: a38cf168-d43f-4560-8740-0a14a2c1999f
+                            IsEnabled: true
+                            LocalOrientation:
+                              W: 1.0
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalPosition:
+                              X: 0.0
+                              Y: 0.0
+                              Z: 0.0
+                            LocalScale:
+                              X: 1.0
+                              Y: 1.0
+                              Z: 1.0
+                          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+                            Id: 302161e2-eb98-401b-b5d7-74a14b34592d
+                            AsignedTo: Material.015
+                            IsEnabled: true
+                            Material: 7c215cd3-c1b9-44e1-a0fa-375d321fbb6c
+                            UseCopy: false
+                          - !Evergine.Components.Graphics3D.MeshComponent,Evergine.Framework
+                            Id: 3b3bf0fc-39a7-455d-95ce-6f7ba514c4c1
+                            IsEnabled: true
+                            Model: e164b6ee-73b2-419c-8253-0bc99f8501b4
+                            ModelMeshName: int_Material_015_0
+                          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+                            Id: 46f03b5b-53c5-450c-9019-9f767dc9883e
+                            DebugBoundingbox: true
+                            IsCullingEnabled: true
+                            IsEnabled: true
+                            OrderBias: 0
+                            RenderFlags: CastShadows
+                        Children: []
+                        Id: c3829ef1-cbbc-4b2a-a9c7-07944de83e6f
+                    Id: 4a67d48b-615a-464c-9977-921bf3a4a84d
+                Id: 0032bb8d-5bd6-4e7b-a48d-0b108ae4ec47
+            Id: 371589df-d929-4019-9691-ad97f7da8e7c
+        Id: 43c83af5-e812-4cfe-9930-c2c079b43160
+      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+        Name: ground
+        Tag: null
+        IsEnabled: true
+        IsStatic: false
+        Components:
+          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+            Id: 27b5bd2f-f33c-44e1-a623-027ff4173a4d
+            IsEnabled: true
+            LocalOrientation:
+              W: 1.58509743
+              X: 0.0
+              Y: 0.0
+              Z: 0.0
+            LocalPosition:
+              X: 0.0
+              Y: 0.0
+              Z: 0.0
+            LocalScale:
+              X: 4.52506781
+              Y: 0.0
+              Z: 4.52506781
+          - !Evergine.Components.Graphics3D.MaterialComponent,Evergine.Framework
+            Id: c07e37ba-2917-466f-a964-f68a3aa2477f
+            AsignedTo: Default
+            IsEnabled: true
+            Material: cf7aa4cd-fcec-48ee-a51f-7a60fb55aee8
+            UseCopy: false
+          - !Evergine.Components.Graphics3D.CylinderMesh,Evergine.Components
+            Id: b43e27d8-e2b2-486d-9109-424a6507bcd9
+            Diameter: 1.0
+            Height: 1.0
+            IsEnabled: true
+            Tessellation: 50
+          - !Evergine.Components.Graphics3D.MeshRenderer,Evergine.Framework
+            Id: 9b8820d4-85d1-4827-a023-76a8885290e4
+            DebugBoundingbox: true
+            IsCullingEnabled: true
+            IsEnabled: true
+            OrderBias: 0
+            RenderFlags: CastShadows
+        Children: []
+        Id: 04d3bc19-0edc-4994-9141-aec29d6e9ebc
+    Id: 9e008ceb-932f-4c30-9722-2ae6e5b5b0a5
+  - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+    Name: Center
+    Tag: null
+    IsEnabled: true
+    IsStatic: false
+    Components:
+      - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+        Id: c93fe284-4168-43bf-b73b-5a7d280022a7
+        IsEnabled: true
+        LocalOrientation:
+          W: 1.0
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        LocalPosition:
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        LocalScale:
+          X: 1.0
+          Y: 1.0
+          Z: 1.0
+      - !TeslaCar.Behaviors.CameraBehavior,TeslaCar
+        Id: 50e536ff-b363-4b8a-b7b1-d4e6404d6e82
+        IsEnabled: true
+        TouchSensibility: 0.0
+        UpdateOrder: 0.5
+    Children:
+      - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
+        Name: Camera
+        Tag: null
+        IsEnabled: true
+        IsStatic: false
+        Components:
+          - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
+            Id: 809f1d2c-2305-4916-acfe-f81399ffb235
+            IsEnabled: true
+            LocalOrientation:
+              W: 0.994390547
+              X: -0.105748817
+              Y: -0.00215532328
+              Z: -0.00022920956
+            LocalPosition:
+              X: -0.000184740275
+              Y: 1.62731516
+              Z: 6.2168932
+            LocalScale:
+              X: 0.99999994
+              Y: 0.99999994
+              Z: 0.99999994
+          - !Evergine.Framework.Graphics.Camera3D,Evergine.Framework
+            Id: 5b10653e-93d2-48e7-884f-a07b2ac173ee
+            Aperture: 1.0
+            AutoDepthBounds: false
+            AutoExposureEnabled: false
+            CameraOrder: 0.0
+            ClearDepth: 1.0
+            ClearFlags: All
+            ClearStencil: 0
+            Compensation: 0.0
+            DisplayTag: null
+            Exposure: 1.0
+            FarPlane: 1000.0
+            FieldOfView: 0.785398185
+            FieldOfViewAxis: Vertical
+            FocalDistance: 1.0
+            FocalLength: 50.0
+            FrameBuffer: null
+            FrustumCullingEnabled: true
+            HDREnabled: true
+            IsEnabled: true
+            LayerMaskDefaultValue: true
+            LinearBackgroundColor:
+              A: 1.0
+              B: 1.0
+              G: 1.0
+              R: 1.0
+            LogLuminanceRange: 12.0
+            MinLogLuminance: -10.0
+            NearPlane: 0.100000001
+            Sensitivity: 100.0
+            SensorSize:
+              X: 36.0
+              Y: 24.0
+            ShutterSpeed: 1.20000005
+            TAU: 1.10000002
+            TagFilter: null
+            UsePhysicalParameters: false
+        Children: []
+        Id: 9841b6b3-9c09-4b60-b442-a5c63257ee02
+    Id: b47e1484-73d2-4729-9396-b98f3445b090
+Managers:
+  - !Evergine.Framework.Managers.AssetSceneManager,Evergine.Framework
+    Id: 4ae9964a-5a8a-463f-b714-050389b3b68c
+    IsEnabled: true
+  - !Evergine.Framework.Managers.BehaviorManager,Evergine.Framework
+    Id: 5ae9e102-b637-4820-8f10-68680d16ffaf
+    IsEnabled: true
+  - !Evergine.Framework.Managers.EntityManager,Evergine.Framework
+    Id: 54e6745a-92b2-4006-a947-cb3ea9b4e10f
+    IsEnabled: true
+  - !Evergine.Framework.Managers.EnvironmentManager,Evergine.Framework
+    Id: 1b603d3f-2c3a-46aa-b1b4-da1958dc2ffd
+    IBLReflectionProbe: 6f51bee0-e1b6-412c-bb2b-aefabee774e6
+    IntensityMultiplier: 1.0
+    IsEnabled: true
+    Strategy: Automatically
+  - !Evergine.Framework.Managers.RenderManager,Evergine.Framework
+    Id: 74d7b50a-648a-4ed3-9529-2bc370878c12
+    DebugLines: false
+    IsEnabled: true
+  - !Evergine.Framework.Managers.ShadowMapManager,Evergine.Framework
+    Id: 644aaced-4367-45ac-b0af-d9a6ecce076c
+    AutoDepthBounds: false
+    DirectionalResolution: Size_1024
+    IsEnabled: true
+    PunctualResolution: Size_512
+    ShadowFilter: PCF3x3
+    SpotResolution: Size_512
+  - !Evergine.Framework.Managers.VirtualScreenManager,Evergine.Framework
+    Id: b4f40b87-f84b-4aa5-a73d-f1886ee09e1c
+    Expand: true
+    IsEnabled: false
+    Stretch: Uniform
+    VirtualHeight: 0.0
+    VirtualWidth: 0.0
