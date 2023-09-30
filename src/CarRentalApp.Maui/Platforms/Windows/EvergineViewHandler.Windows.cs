@@ -1,4 +1,3 @@
-using CarRentalApp.Controls;
 using Evergine.Common.Graphics;
 using Evergine.DirectX11;
 using Evergine.Framework.Graphics;
@@ -13,11 +12,9 @@ namespace CarRentalApp.Controls
 {
     public partial class EvergineViewHandler : ViewHandler<EvergineView, WinUIGrid>
     {
-        private bool isViewLoaded;
-
-        private SwapChainPanel swapChainPanel;
-
-        private bool isEvergineInitialized;
+        bool isViewLoaded;
+        SwapChainPanel swapChainPanel;
+        bool isEvergineInitialized;
 
         public EvergineViewHandler(IPropertyMapper mapper, CommandMapper commandMapper = null)
             : base(mapper, commandMapper)
@@ -54,14 +51,14 @@ namespace CarRentalApp.Controls
 
             this.isViewLoaded = false;
 
-            platformView.Loaded += this.OnPlatformViewLoaded;
+            platformView.Loaded += OnPlatformViewLoaded;
         }
 
         protected override void DisconnectHandler(WinUIGrid platformView)
         {
             base.DisconnectHandler(platformView);
 
-            platformView.Loaded -= this.OnPlatformViewLoaded;
+            platformView.Loaded -= OnPlatformViewLoaded;
 
             this.swapChainPanel = null;
         }
@@ -72,7 +69,7 @@ namespace CarRentalApp.Controls
             this.UpdateValue(nameof(EvergineView.Application));
         }
 
-        private void UpdateApplication(SwapChainPanel swapChainPanel, EvergineView view, string displayName)
+        void UpdateApplication(SwapChainPanel swapChainPanel, EvergineView view, string displayName)
         {
             if (view.Application is null || this.isEvergineInitialized)
             {
@@ -104,7 +101,7 @@ namespace CarRentalApp.Controls
             this.isEvergineInitialized = true;
         }
 
-        private void ConfigureGraphicsContext(global::Evergine.Framework.Application application, WinUISurface surface, string displayName)
+        void ConfigureGraphicsContext(Evergine.Framework.Application application, WinUISurface surface, string displayName)
         {
             var graphicsContext = application.Container.Resolve<GraphicsContext>();
             var swapChainDescription = new SwapChainDescription()

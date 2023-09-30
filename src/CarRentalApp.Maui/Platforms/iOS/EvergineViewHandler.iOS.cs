@@ -1,4 +1,3 @@
-using CarRentalApp.Controls;
 using CarRentalApp.MAUI.Platforms.iOS;
 using Evergine.Common.Graphics;
 using Evergine.Framework.Graphics;
@@ -38,22 +37,22 @@ namespace CarRentalApp.Controls
         {
             base.ConnectHandler(platformView);
             this.isViewLoaded = false;
-            this.evergineViewController.OnViewDidLayoutSubviews += this.EvergineViewController_OnViewDidLayoutSubviews;
+            this.evergineViewController.OnViewDidLayoutSubviews += EvergineViewController_OnViewDidLayoutSubviews;
         }
 
         protected override void DisconnectHandler(UIView platformView)
         {
             base.DisconnectHandler(platformView);
-            this.evergineViewController.OnViewDidLayoutSubviews -= this.EvergineViewController_OnViewDidLayoutSubviews;
+            this.evergineViewController.OnViewDidLayoutSubviews -= EvergineViewController_OnViewDidLayoutSubviews;
         }
 
-        private void EvergineViewController_OnViewDidLayoutSubviews(object sender, EventArgs e)
+        void EvergineViewController_OnViewDidLayoutSubviews(object sender, EventArgs e)
         {
             this.isViewLoaded = true;
             this.UpdateValue(nameof(EvergineView.Application));
         }
 
-        private void UpdateApplication(EvergineView view)
+        void UpdateApplication(EvergineView view)
         {
             if (view.Application is null || this.isEvergineInitialized)
             {
@@ -89,7 +88,7 @@ namespace CarRentalApp.Controls
             this.isEvergineInitialized = true;
         }
 
-        private static void ConfigureGraphicsContext(global::Evergine.Framework.Application application, Surface surface)
+        static void ConfigureGraphicsContext(global::Evergine.Framework.Application application, Surface surface)
         {
             GraphicsContext graphicsContext = new global::Evergine.Metal.MTLGraphicsContext();
             graphicsContext.CreateDevice();

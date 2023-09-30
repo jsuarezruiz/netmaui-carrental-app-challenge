@@ -62,7 +62,7 @@ namespace CarRentalApp.Controls
             return androidSurface.NativeSurface;
         }
 
-        private void ConfigureGraphicsContext(MyApplication application, Surface surface)
+        void ConfigureGraphicsContext(MyApplication application, Surface surface)
         {
             var graphicsContext = new VKGraphicsContext();
             graphicsContext.CreateDevice();
