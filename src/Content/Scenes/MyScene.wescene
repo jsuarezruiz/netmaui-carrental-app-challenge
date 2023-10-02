@@ -2471,7 +2471,7 @@ Items:
       - !CarRentalApp.Behaviors.CameraBehavior,CarRentalApp
         Id: 50e536ff-b363-4b8a-b7b1-d4e6404d6e82
         IsEnabled: true
-        TouchSensibility: 0.0
+        TouchSensibility: 0.5
         UpdateOrder: 0.5
     Children:
       - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
@@ -2484,18 +2484,18 @@ Items:
             Id: 809f1d2c-2305-4916-acfe-f81399ffb235
             IsEnabled: true
             LocalOrientation:
-              W: 0.994390547
-              X: -0.105748817
-              Y: -0.00215532328
-              Z: -0.00022920956
+              W: 0.994884729
+              X: -0.100993469
+              Y: -0.0021563964
+              Z: -0.000218902118
             LocalPosition:
-              X: -0.000184740275
-              Y: 1.62731516
-              Z: 6.2168932
+              X: 0.0125223352
+              Y: 1.02215159
+              Z: 3.28543162
             LocalScale:
               X: 0.99999994
-              Y: 0.99999994
-              Z: 0.99999994
+              Y: 1.0
+              Z: 1.0
           - !Evergine.Framework.Graphics.Camera3D,Evergine.Framework
             Id: 5b10653e-93d2-48e7-884f-a07b2ac173ee
             Aperture: 1.0
