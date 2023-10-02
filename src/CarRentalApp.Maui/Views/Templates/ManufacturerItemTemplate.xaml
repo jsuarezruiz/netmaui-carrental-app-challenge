@@ -6,14 +6,15 @@
     <ContentView.Resources>
         <ResourceDictionary>
 
-            <Style x:Key="ManufacturerBorderStyle" TargetType="Border">
-                <Setter Property="StrokeShape" Value="Ellipse" />
-                <Setter Property="Background" Value="Black" />
+            <Style x:Key="ManufacturerBorderStyle" TargetType="Ellipse">
+                <Setter Property="Fill" Value="Black" />
                 <Setter Property="HeightRequest" Value="60" />
                 <Setter Property="WidthRequest" Value="60" />
             </Style>
 
             <Style x:Key="ManufacturerImageStyle" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="WidthRequest" Value="40" />
             </Style>
@@ -30,12 +31,13 @@
     </ContentView.Resources>
     <Grid
         RowDefinitions="*, Auto">
-        <Border
-            Style="{StaticResource ManufacturerBorderStyle}">
+        <Grid>
+            <Ellipse
+                Style="{StaticResource ManufacturerBorderStyle}" />
             <Image 
                 Source="{Binding Logo}"
                 Style="{StaticResource ManufacturerImageStyle}"/>
-        </Border>
+        </Grid>
         <Label 
             Grid.Row="1"
             Text="{Binding Name}"
