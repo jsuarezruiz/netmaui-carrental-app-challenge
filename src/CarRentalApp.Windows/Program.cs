@@ -71,8 +71,6 @@ namespace CarRentalApp.Windows
                 application.UpdateFrame(gameTime);
                 application.DrawFrame(gameTime);
             });
-
-            application.Dispose();
         }
 
         private static void ConfigureGraphicsContext(Application application, Window window)

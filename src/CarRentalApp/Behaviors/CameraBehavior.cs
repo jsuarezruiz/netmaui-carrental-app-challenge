@@ -7,7 +7,6 @@ using Evergine.Framework;
 using Evergine.Framework.Graphics;
 using Evergine.Mathematics;
 using System;
-using System.Drawing;
 using System.Linq;
 
 namespace CarRentalApp.Behaviors
@@ -41,7 +40,7 @@ namespace CarRentalApp.Behaviors
         /// <remarks>
         /// 0.5 is for stop, 1 is for raw delta, 2 is twice delta.
         /// </remarks>
-        public float TouchSensibility { get; set; }
+        public float TouchSensibility { get; set; } = 0.5f;
 
         /// <summary>
         /// The theta.
@@ -117,6 +116,9 @@ namespace CarRentalApp.Behaviors
             }
         }
 
+        /// <summary>
+        /// Handle the Mouse and Pointer events
+        /// </summary>
         private void HandleInput()
         {
             if (Evergine.Platform.DeviceInfo.PlatformType == Evergine.Common.PlatformType.Windows)
@@ -130,7 +132,7 @@ namespace CarRentalApp.Behaviors
         }
 
         /// <summary>
-        /// Handles the input.
+        /// Handles the mouse events.
         /// </summary>
         private void HandleMouse()
         {
@@ -168,6 +170,9 @@ namespace CarRentalApp.Behaviors
             }
         }
 
+        /// <summary>
+        /// Handle the pointer events
+        /// </summary>
         private void HandleTouch()
         {
             if (this.touchDispatcher == null)
