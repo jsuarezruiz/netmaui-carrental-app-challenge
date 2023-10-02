@@ -58,7 +58,7 @@ Items:
   - !Evergine.Framework.Assets.AssetSources.Entities.EntityItemModel,Evergine.Framework
     Name: SkyAtmosphere
     Tag: Skybox
-    IsEnabled: true
+    IsEnabled: false
     IsStatic: false
     Components:
       - !Evergine.Framework.Graphics.Transform3D,Evergine.Framework
@@ -2493,7 +2493,7 @@ Items:
               Y: 1.02215159
               Z: 3.28543162
             LocalScale:
-              X: 0.99999994
+              X: 1.0
               Y: 1.0
               Z: 1.0
           - !Evergine.Framework.Graphics.Camera3D,Evergine.Framework
