@@ -2484,16 +2484,16 @@ Items:
             Id: 809f1d2c-2305-4916-acfe-f81399ffb235
             IsEnabled: true
             LocalOrientation:
-              W: 0.994884729
-              X: -0.100993469
-              Y: -0.0021563964
-              Z: -0.000218902118
+              W: 0.994886935
+              X: -0.100971557
+              Y: -0.00215640152
+              Z: -0.00021885462
             LocalPosition:
-              X: 0.0125223352
-              Y: 1.02215159
-              Z: 3.28543162
+              X: 0.0118041923
+              Y: 1.056041
+              Z: 3.45078707
             LocalScale:
-              X: 1.0
+              X: 0.99999994
               Y: 1.0
               Z: 1.0
           - !Evergine.Framework.Graphics.Camera3D,Evergine.Framework
@@ -2509,7 +2509,7 @@ Items:
             DisplayTag: null
             Exposure: 1.0
             FarPlane: 1000.0
-            FieldOfView: 0.785398185
+            FieldOfView: 0.52359879
             FieldOfViewAxis: Vertical
             FocalDistance: 1.0
             FocalLength: 50.0
