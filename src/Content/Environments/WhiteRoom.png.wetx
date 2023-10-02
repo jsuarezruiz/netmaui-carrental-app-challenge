@@ -8,7 +8,7 @@ DefaultProfile:
   Platform: Undefined
   ScaledHeight: 720
   ScaledPercentage: 1.0
-  ScaledWidth: 1280
+  ScaledWidth: 1443
   ScalingType: Original
 ExportAsRaw: false
 GenerateMipMaps: true
@@ -35,6 +35,6 @@ Source:
       SampleCount: None
       Type: Texture2D
       Usage: Default
-      Width: 1280
+      Width: 1443
     HasData: true
     SamplerID: 9018edf8-ea96-4721-bf83-5561942432e0
