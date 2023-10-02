@@ -6,12 +6,12 @@ DefaultProfile:
   Platform: Undefined
 ExportAsRaw: false
 MaterialInfo:
-  Id: 2e32fd59-6afb-4885-94e8-ab3d55dcfe69
+  Id: f8a188a4-7a58-4438-9bf1-176672d3203c
   ActiveDirectives:
     - DIFF
   AllowInstancing: false
   EffectID: daa1f60a-82ad-40fc-8fbb-7b85caa6de0a
-  Layer: 0db59561-b3f5-444f-b5de-e62e3a5b42bf
+  Layer: e35c59a9-26ab-4b4c-8210-4b1f21c31530
   OrderBias: 0
   Parameters:
     - Name: World
