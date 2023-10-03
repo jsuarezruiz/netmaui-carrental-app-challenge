@@ -6,6 +6,10 @@
     <ContentView.Resources>
         <ResourceDictionary>
 
+            <Style x:Key="ManufacturerLayoutStyle" TargetType="Grid">
+                <Setter Property="WidthRequest" Value="60" />
+            </Style>
+        
             <Style x:Key="ManufacturerBorderStyle" TargetType="Ellipse">
                 <Setter Property="Fill" Value="Black" />
                 <Setter Property="HeightRequest" Value="60" />
@@ -30,7 +34,8 @@
         </ResourceDictionary>
     </ContentView.Resources>
     <Grid
-        RowDefinitions="*, Auto">
+        RowDefinitions="*, Auto"
+        Style="{StaticResource ManufacturerLayoutStyle}">
         <Grid>
             <Ellipse
                 Style="{StaticResource ManufacturerBorderStyle}" />
