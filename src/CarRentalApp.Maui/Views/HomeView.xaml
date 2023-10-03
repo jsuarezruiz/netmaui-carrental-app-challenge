@@ -24,6 +24,7 @@
             </Style>
 
             <Style x:Key="NavBarLayoutStyle" TargetType="Grid">
+                <Setter Property="HeightRequest" Value="80" />
                 <Setter Property="Padding" Value="12, 24" />
             </Style>
 
@@ -56,20 +57,24 @@
                 <Setter Property="Margin" Value="6, 0" />
             </Style>
 
+            <Style x:Key="SearchLayoutStyle" TargetType="Grid" BasedOn="{StaticResource PaddingLayoutStyle}">
+                <Setter Property="HeightRequest" Value="80" />
+            </Style>
+
             <Style x:Key="SearchBarBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 48" />
                 <Setter Property="Background" Value="{StaticResource White}" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="Margin" Value="0, 0, 12, 0" />
             </Style>
-            
+
             <Style x:Key="SearchIconStyle" TargetType="Image">
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="Margin" Value="12, 2" />
             </Style>
 
             <Color x:Key="SearchBarTextColor">#A8A8A8</Color>
-            
+
             <Style x:Key="SearchBarStyle" TargetType="SearchBar">
                 <Setter Property="Background" Value="Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource SearchBarTextColor}" />
@@ -83,9 +88,19 @@
                 <Setter Property="WidthRequest" Value="40" />
             </Style>
 
+            <Style x:Key="ManufactersCollectionViewStyle" TargetType="CollectionView">
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="Margin" Value="24" />
+            </Style>
+
             <Style x:Key="BestCarsBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 48, 48, 0, 0" />
                 <Setter Property="Background" Value="{StaticResource White}" />
+            </Style>
+
+            <Style x:Key="BestCarsCollectionViewStyle" TargetType="CollectionView">
+                <Setter Property="HeightRequest" Value="250" />
+                <Setter Property="Margin" Value="12, 6" />
             </Style>
 
             <Style x:Key="SectionStyle" TargetType="Label">
@@ -113,8 +128,7 @@
     </ContentPage.Resources>
     <Grid>
         <ScrollView>
-            <Grid
-                RowDefinitions="Auto, Auto, Auto, Auto, *">
+            <StackLayout>
                 <!-- NAVBAR -->
                 <Grid
                     ColumnDefinitions="*, Auto, Auto"
@@ -143,9 +157,8 @@
                 </Grid>
                 <!-- SEARCH -->
                 <Grid
-                    Grid.Row="1"
                     ColumnDefinitions="*, Auto"
-                    Style="{StaticResource PaddingLayoutStyle}">
+                    Style="{StaticResource SearchLayoutStyle}">
                     <Border
                         Style="{StaticResource SearchBarBorderStyle}">
                         <Grid>
@@ -166,10 +179,9 @@
                     </Border>
                 </Grid>
                 <!-- MANUFACTERS -->
-                <CollectionView
-                    Grid.Row="2"
+                <CollectionView 
                     ItemsSource="{Binding Manufacturers}"
-                    Margin="24">
+                    Style="{StaticResource ManufactersCollectionViewStyle}">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout
                             ItemSpacing="12"
@@ -183,7 +195,6 @@
                 </CollectionView>
                 <!-- BEST -->
                 <Grid
-                    Grid.Row="3"
                     RowDefinitions="Auto, *">
                     <Border 
                         Grid.RowSpan="2"
@@ -194,7 +205,7 @@
                     <CollectionView
                         Grid.Row="1"
                         ItemsSource="{Binding Cars}"
-                        Margin="12, 6">
+                        Style="{StaticResource BestCarsCollectionViewStyle}">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
                              ItemSpacing="12"
@@ -209,7 +220,6 @@
                 </Grid>
                 <!-- NEARBY -->
                 <Grid
-                    Grid.Row="4"
                     RowDefinitions="Auto, *">
                     <Border 
                         Grid.RowSpan="2"
@@ -235,7 +245,7 @@
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                 </Grid>
-            </Grid>
+            </StackLayout>
         </ScrollView>
         <controls:TabView 
             Style="{StaticResource TabViewStyle}"/>

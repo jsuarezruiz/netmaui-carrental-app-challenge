@@ -17,7 +17,7 @@
             <Style x:Key="NavBarLayoutStyle" TargetType="Grid">
                 <Setter Property="Padding" Value="12, 24" />
             </Style>
-            
+
             <Style x:Key="NavBarButtonStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="Ellipse" />
                 <Setter Property="Background" Value="Transparent" />
@@ -27,13 +27,13 @@
                 <Setter Property="WidthRequest" Value="40" />
                 <Setter Property="VerticalOptions" Value="Center" />
             </Style>
-            
+
             <Style x:Key="TitleStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Black}" />
-                <Setter Property="FontSize" Value="20" />    
+                <Setter Property="FontSize" Value="20" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
+
             <Style x:Key="DetailsBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 60, 60, 0, 0" />
                 <Setter Property="Background" Value="{StaticResource White}" />
@@ -41,7 +41,7 @@
             </Style>
 
             <Style x:Key="EvergineViewStyle" TargetType="evergine:EvergineView">
-                <Setter Property="MinimumHeightRequest" Value="300" />
+                <Setter Property="MinimumHeightRequest" Value="250" />
                 <Setter Property="Margin" Value="0, 12" />
             </Style>
 
@@ -51,7 +51,7 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="12" />
             </Style>
-            
+
             <Style x:Key="DetailsDescriptionStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Gray" />
                 <Setter Property="FontSize" Value="14" />
@@ -59,7 +59,7 @@
                 <Setter Property="WidthRequest" Value="280" />
                 <Setter Property="Margin" Value="12, 6" />
             </Style>
-            
+
             <Style x:Key="SeparatorStyle" TargetType="BoxView">
                 <Setter Property="Color" Value="{StaticResource Black}" />
                 <Setter Property="Opacity" Value="0.25" />
@@ -75,15 +75,16 @@
             </Style>
 
             <Color x:Key="SpecificationColor">#E0E5F9</Color>
-        
+
             <Style x:Key="SepecificationBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24" />
                 <Setter Property="Background" Value="{StaticResource SpecificationColor}" />
-                <Setter Property="HeightRequest" Value="110" />
-                <Setter Property="WidthRequest" Value="110" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="WidthRequest" Value="120" />
                 <Setter Property="Margin" Value="0, 0, 12, 0" />
             </Style>
-            
+
             <Style x:Key="SepecificationIconBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="Ellipse" />
                 <Setter Property="Background" Value="{StaticResource White}" />
@@ -97,18 +98,19 @@
                 <Setter Property="TextColor" Value="DarkGray" />
                 <Setter Property="FontSize" Value="13" />
             </Style>
-            
+
             <Style x:Key="SepecificationDescriptionStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="16" />
             </Style>
-            
+
             <Color x:Key="PriceBorderBackgroundColor">#26272D</Color>
-            
+
             <Style x:Key="PriceBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24, 24, 0, 0" />
                 <Setter Property="Background" Value="{StaticResource PriceBorderBackgroundColor}" />
-                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="StrokeThickness" Value="0"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
                 <Setter Property="Margin" Value="0, 48, 0, 0"/>
             </Style>
 
@@ -119,7 +121,7 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="Margin" Value="24" />
             </Style>
-            
+
             <Style x:Key="RentalPriceStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource White}" />
                 <Setter Property="FontSize" Value="18" />
@@ -132,18 +134,18 @@
             <Style x:Key="BookBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24, 24, 0, 0" />
                 <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
-                <Setter Property="MinimumHeightRequest" Value="150"/>
+                <Setter Property="StrokeThickness" Value="0"/>
             </Style>
-            
+
             <Style x:Key="BookButtonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource Accent}"/>
                 <Setter Property="TextColor" Value="{StaticResource White}"/>
                 <Setter Property="CornerRadius" Value="24"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="End"/>
                 <Setter Property="HeightRequest" Value="48"/>
                 <Setter Property="WidthRequest" Value="300"/>
-                <Setter Property="Margin" Value="12"/>
+                <Setter Property="Margin" Value="12, 48"/>
             </Style>
 
         </ResourceDictionary>
@@ -210,7 +212,7 @@
                             Style="{StaticResource SepecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
-                                Padding="6">
+                                Padding="12">
                                 <Border
                                     Style="{StaticResource SepecificationIconBorderStyle}">
                                     <Image
@@ -231,7 +233,7 @@
                             Style="{StaticResource SepecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
-                                Padding="6">
+                                Padding="12">
                                 <Border
                                     Style="{StaticResource SepecificationIconBorderStyle}">
                                     <Image
@@ -252,7 +254,7 @@
                             Style="{StaticResource SepecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
-                                Padding="6">
+                                Padding="12">
                                 <Border
                                     Style="{StaticResource SepecificationIconBorderStyle}">
                                     <Image
