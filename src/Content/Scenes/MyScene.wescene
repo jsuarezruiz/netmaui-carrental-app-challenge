@@ -2639,7 +2639,7 @@ Managers:
     IBLReflectionProbe: 6f51bee0-e1b6-412c-bb2b-aefabee774e6
     IntensityMultiplier: 1.0
     IsEnabled: true
-    Strategy: Automatically
+    Strategy: OnDemand
   - !Evergine.Framework.Managers.RenderManager,Evergine.Framework
     Id: 74d7b50a-648a-4ed3-9529-2bc370878c12
     DebugLines: false
