@@ -133,6 +133,7 @@
 				<PackageReference Include="Evergine.Metal" Version="2023.9.28.510" />
 				<PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
 				<PackageReference Include="Evergine.Targets.iOS" Version="2023.9.28.510" />
+				<PackageReference Include="Evergine.LibBulletc.Natives" Version="2023.9.22.18" />
 			</ItemGroup>
 		</When>
 		<When Condition="'$(TargetFramework)' == 'net7.0-windows10.0.19041.0'">
