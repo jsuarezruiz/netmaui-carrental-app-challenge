@@ -29,6 +29,9 @@ namespace CarRentalApp
         public sealed class Materials
         {
             
+            /// <summary> Asset Path (Materials/BlueMat.wemt) </summary>
+            public static readonly Guid BlueMat = new Guid("fd599249-5405-4cf0-b950-5573dd037b3b");
+            
             /// <summary> Asset Path (Materials/ShadowMat.wemt) </summary>
             public static readonly Guid ShadowMat = new Guid("cf7aa4cd-fcec-48ee-a51f-7a60fb55aee8");
             
