@@ -1,4 +1,3 @@
-!Evergine.Common.ProjectModel,Evergine.Common
 Packages:
   - Id: Evergine.Core
     LocalPath: null
