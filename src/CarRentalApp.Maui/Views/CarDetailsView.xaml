@@ -15,7 +15,7 @@
             </Style>
 
             <Style x:Key="NavBarLayoutStyle" TargetType="Grid">
-                <Setter Property="Padding" Value="12, 24" />
+                <Setter Property="Padding" Value="12, 24, 12, 12" />
             </Style>
 
             <Style x:Key="NavBarButtonStyle" TargetType="Border">
@@ -37,11 +37,12 @@
             <Style x:Key="DetailsBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 60, 60, 0, 0" />
                 <Setter Property="Background" Value="{StaticResource White}" />
-                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
 
             <Style x:Key="EvergineViewStyle" TargetType="evergine:EvergineView">
-                <Setter Property="MinimumHeightRequest" Value="250" />
+                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="MinimumHeightRequest" Value="100" />
                 <Setter Property="Margin" Value="0, 12" />
             </Style>
 
@@ -67,7 +68,7 @@
                 <Setter Property="Margin" Value="12, 6" />
             </Style>
 
-            <Style x:Key="SepecificationSectionStyle" TargetType="Label">
+            <Style x:Key="SpecificationSectionStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Black}" />
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontAttributes" Value="Bold" />
@@ -76,16 +77,16 @@
 
             <Color x:Key="SpecificationColor">#E0E5F9</Color>
 
-            <Style x:Key="SepecificationBorderStyle" TargetType="Border">
+            <Style x:Key="SpecificationBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24" />
                 <Setter Property="Background" Value="{StaticResource SpecificationColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="HeightRequest" Value="120" />
-                <Setter Property="WidthRequest" Value="120" />
+                <Setter Property="HeightRequest" Value="110" />
+                <Setter Property="WidthRequest" Value="110" />
                 <Setter Property="Margin" Value="0, 0, 12, 0" />
             </Style>
 
-            <Style x:Key="SepecificationIconBorderStyle" TargetType="Border">
+            <Style x:Key="SpecificationIconBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="Ellipse" />
                 <Setter Property="Background" Value="{StaticResource White}" />
                 <Setter Property="HorizontalOptions" Value="Start" />
@@ -94,12 +95,12 @@
                 <Setter Property="Margin" Value="0, 6" />
             </Style>
 
-            <Style x:Key="SepecificationTitleStyle" TargetType="Label">
+            <Style x:Key="SpecificationTitleStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="DarkGray" />
                 <Setter Property="FontSize" Value="13" />
             </Style>
 
-            <Style x:Key="SepecificationDescriptionStyle" TargetType="Label">
+            <Style x:Key="SpecificationDescriptionStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="16" />
             </Style>
@@ -111,7 +112,7 @@
                 <Setter Property="Background" Value="{StaticResource PriceBorderBackgroundColor}" />
                 <Setter Property="StrokeThickness" Value="0"/>
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
-                <Setter Property="Margin" Value="0, 48, 0, 0"/>
+                <Setter Property="Margin" Value="0, 36, 0, 0"/>
             </Style>
 
             <Style x:Key="RentalDescriptionStyle" TargetType="Label">
@@ -135,6 +136,8 @@
                 <Setter Property="StrokeShape" Value="RoundRectangle 24, 24, 0, 0" />
                 <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
                 <Setter Property="StrokeThickness" Value="0"/>
+                <Setter Property="MinimumHeightRequest" Value="150"/>
+                <Setter Property="Margin" Value="0"/>
             </Style>
 
             <Style x:Key="BookButtonStyle" TargetType="Button">
@@ -142,16 +145,15 @@
                 <Setter Property="TextColor" Value="{StaticResource White}"/>
                 <Setter Property="CornerRadius" Value="24"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="End"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="HeightRequest" Value="48"/>
                 <Setter Property="WidthRequest" Value="300"/>
-                <Setter Property="Margin" Value="12, 48"/>
             </Style>
 
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid
-        RowDefinitions="Auto, Auto, *">
+        RowDefinitions="Auto, 1.5*, 3*">
         <!-- NAVBAR -->
         <Grid
             ColumnDefinitions="Auto, *, Auto"
@@ -177,7 +179,7 @@
             </Border>
         </Grid>
         <!-- 3D CONTENT -->
-        <evergine:EvergineView 
+        <evergine:EvergineView
             Grid.Row="1"
             x:Name="EvergineView"
             Style="{StaticResource EvergineViewStyle}"/>
@@ -203,71 +205,71 @@
                     RowDefinitions="Auto, *">
                     <Label
                         Text="Specification"
-                        Style="{StaticResource SepecificationSectionStyle}"/>
+                        Style="{StaticResource SpecificationSectionStyle}"/>
                     <Grid
                         Grid.Row="1"
                         ColumnDefinitions="*, *, *"
                         Style="{StaticResource PaddingLayoutStyle}">
                         <Border
-                            Style="{StaticResource SepecificationBorderStyle}">
+                            Style="{StaticResource SpecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
                                 Padding="12">
                                 <Border
-                                    Style="{StaticResource SepecificationIconBorderStyle}">
+                                    Style="{StaticResource SpecificationIconBorderStyle}">
                                     <Image
                                         Source="seat_icon.png"/>
                                 </Border>
                                 <Label 
                                     Grid.Row="1"
                                     Text="Capacity"
-                                    Style="{StaticResource SepecificationTitleStyle}"/>
+                                    Style="{StaticResource SpecificationTitleStyle}"/>
                                 <Label 
                                     Grid.Row="2"
                                     Text="4 seats"
-                                    Style="{StaticResource SepecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
                             </Grid>
                         </Border>
                         <Border
                             Grid.Column="1"
-                            Style="{StaticResource SepecificationBorderStyle}">
+                            Style="{StaticResource SpecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
                                 Padding="12">
                                 <Border
-                                    Style="{StaticResource SepecificationIconBorderStyle}">
+                                    Style="{StaticResource SpecificationIconBorderStyle}">
                                     <Image
                                         Source="engine_icon.png"/>
                                 </Border>
                                 <Label 
                                     Grid.Row="1"
                                     Text="Engine Out"
-                                    Style="{StaticResource SepecificationTitleStyle}"/>
+                                    Style="{StaticResource SpecificationTitleStyle}"/>
                                 <Label 
                                     Grid.Row="2"
                                     Text="600 HP"
-                                    Style="{StaticResource SepecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
                             </Grid>
                         </Border>
                         <Border
                             Grid.Column="2"
-                            Style="{StaticResource SepecificationBorderStyle}">
+                            Style="{StaticResource SpecificationBorderStyle}">
                             <Grid
                                 RowDefinitions="*, Auto, Auto"
                                 Padding="12">
                                 <Border
-                                    Style="{StaticResource SepecificationIconBorderStyle}">
+                                    Style="{StaticResource SpecificationIconBorderStyle}">
                                     <Image
                                         Source="speed_icon.png"/>
                                 </Border>
                                 <Label 
                                     Grid.Row="1"
                                     Text="Max Speed"
-                                    Style="{StaticResource SepecificationTitleStyle}"/>
+                                    Style="{StaticResource SpecificationTitleStyle}"/>
                                 <Label 
                                     Grid.Row="2"
                                     Text="400 km/h"
-                                    Style="{StaticResource SepecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
                             </Grid>
                         </Border>
                     </Grid>
