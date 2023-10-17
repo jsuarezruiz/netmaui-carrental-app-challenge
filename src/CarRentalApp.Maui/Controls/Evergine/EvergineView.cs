@@ -21,5 +21,17 @@ namespace CarRentalApp.Controls
             get { return (string)this.GetValue(DisplayNameProperty); }
             set { this.SetValue(DisplayNameProperty, value); }
         }
+
+        public event EventHandler PointerPressed;
+
+        public event EventHandler PointerMoved;
+
+        public event EventHandler PointerReleased;
+
+        internal void StartInteraction() => this.PointerPressed?.Invoke(this, EventArgs.Empty);
+
+        internal void MovedInteraction() => this.PointerMoved?.Invoke(this, EventArgs.Empty);
+
+        internal void EndInteraction() => this.PointerReleased?.Invoke(this, EventArgs.Empty);
     }
 }

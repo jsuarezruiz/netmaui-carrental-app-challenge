@@ -27,9 +27,6 @@ namespace CarRentalApp
             builder.Services.AddSingleton<HomeView>();
             builder.Services.AddSingleton<HomeViewModel>();
 
-            builder.Services.AddSingleton<CarDetailsView>();
-            builder.Services.AddSingleton<CarDetailsViewModel>();
-
             return builder.Build();
         }
     }

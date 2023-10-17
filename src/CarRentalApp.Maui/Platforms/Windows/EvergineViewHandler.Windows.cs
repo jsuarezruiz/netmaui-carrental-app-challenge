@@ -12,9 +12,12 @@ namespace CarRentalApp.Controls
 {
     public partial class EvergineViewHandler : ViewHandler<EvergineView, WinUIGrid>
     {
-        bool isViewLoaded;
-        SwapChainPanel swapChainPanel;
-        bool isEvergineInitialized;
+        private bool isViewLoaded;
+
+        private SwapChainPanel swapChainPanel;
+
+        private bool isEvergineInitialized;
+        private WinUIWindowsSystem windowsSystem;
 
         public EvergineViewHandler(IPropertyMapper mapper, CommandMapper commandMapper = null)
             : base(mapper, commandMapper)
@@ -51,16 +54,25 @@ namespace CarRentalApp.Controls
 
             this.isViewLoaded = false;
 
-            platformView.Loaded += OnPlatformViewLoaded;
+            platformView.Loaded += this.OnPlatformViewLoaded;
+
+            this.swapChainPanel.PointerPressed += this.OnPlatformViewPointerPressed;
+            this.swapChainPanel.PointerMoved += this.OnPlatformViewPointerMoved;
+            this.swapChainPanel.PointerReleased += this.OnPlatformViewPointerReleased;
         }
 
         protected override void DisconnectHandler(WinUIGrid platformView)
         {
             base.DisconnectHandler(platformView);
 
-            platformView.Loaded -= OnPlatformViewLoaded;
+            platformView.Loaded -= this.OnPlatformViewLoaded;
+
+            this.swapChainPanel.PointerPressed -= this.OnPlatformViewPointerPressed;
+            this.swapChainPanel.PointerMoved -= this.OnPlatformViewPointerMoved;
+            this.swapChainPanel.PointerReleased -= this.OnPlatformViewPointerReleased;
 
             this.swapChainPanel = null;
+            this.windowsSystem.Dispose();
         }
 
         private void OnPlatformViewLoaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
@@ -69,7 +81,22 @@ namespace CarRentalApp.Controls
             this.UpdateValue(nameof(EvergineView.Application));
         }
 
-        void UpdateApplication(SwapChainPanel swapChainPanel, EvergineView view, string displayName)
+        private void OnPlatformViewPointerReleased(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            this.VirtualView.StartInteraction();
+        }
+
+        private void OnPlatformViewPointerMoved(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            this.VirtualView.MovedInteraction();
+        }
+
+        private void OnPlatformViewPointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            this.VirtualView.EndInteraction();
+        }
+
+        private void UpdateApplication(SwapChainPanel swapChainPanel, EvergineView view, string displayName)
         {
             if (view.Application is null || this.isEvergineInitialized)
             {
@@ -81,14 +108,14 @@ namespace CarRentalApp.Controls
             graphicsContext.CreateDevice();
 
             // Create Services
-            var windowsSystem = new WinUIWindowsSystem();
-            view.Application.Container.RegisterInstance(windowsSystem);
+            this.windowsSystem = new WinUIWindowsSystem();
+            view.Application.Container.RegisterInstance(this.windowsSystem);
 
-            var surface = (WinUISurface)windowsSystem.CreateSurface(swapChainPanel);
+            var surface = (WinUISurface)this.windowsSystem.CreateSurface(swapChainPanel);
             this.ConfigureGraphicsContext(view.Application, surface, displayName);
 
             var clockTimer = Stopwatch.StartNew();
-            windowsSystem.Run(
+            this.windowsSystem.Run(
                 view.Application.Initialize,
                 () =>
                 {
@@ -101,7 +128,7 @@ namespace CarRentalApp.Controls
             this.isEvergineInitialized = true;
         }
 
-        void ConfigureGraphicsContext(Evergine.Framework.Application application, WinUISurface surface, string displayName)
+        private void ConfigureGraphicsContext(global::Evergine.Framework.Application application, WinUISurface surface, string displayName)
         {
             var graphicsContext = application.Container.Resolve<GraphicsContext>();
             var swapChainDescription = new SwapChainDescription()

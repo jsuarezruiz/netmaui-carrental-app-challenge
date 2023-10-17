@@ -11,9 +11,9 @@ namespace CarRentalApp.Controls
 {
     public partial class EvergineViewHandler : ViewHandler<EvergineView, UIView>
     {
-        EvergineAppViewController evergineViewController;
-        bool isViewLoaded;
-        bool isEvergineInitialized = false;
+        private EvergineAppViewController evergineViewController;
+        private bool isViewLoaded;
+        private bool isEvergineInitialized = false;
 
         public static void MapApplication(EvergineViewHandler handler, EvergineView evergineView)
         {
@@ -37,22 +37,22 @@ namespace CarRentalApp.Controls
         {
             base.ConnectHandler(platformView);
             this.isViewLoaded = false;
-            this.evergineViewController.OnViewDidLayoutSubviews += EvergineViewController_OnViewDidLayoutSubviews;
+            this.evergineViewController.OnViewDidLayoutSubviews += this.EvergineViewController_OnViewDidLayoutSubviews;
         }
 
         protected override void DisconnectHandler(UIView platformView)
         {
             base.DisconnectHandler(platformView);
-            this.evergineViewController.OnViewDidLayoutSubviews -= EvergineViewController_OnViewDidLayoutSubviews;
+            this.evergineViewController.OnViewDidLayoutSubviews -= this.EvergineViewController_OnViewDidLayoutSubviews;
         }
 
-        void EvergineViewController_OnViewDidLayoutSubviews(object sender, EventArgs e)
+        private void EvergineViewController_OnViewDidLayoutSubviews(object sender, EventArgs e)
         {
             this.isViewLoaded = true;
             this.UpdateValue(nameof(EvergineView.Application));
         }
 
-        void UpdateApplication(EvergineView view)
+        private void UpdateApplication(EvergineView view)
         {
             if (view.Application is null || this.isEvergineInitialized)
             {
@@ -88,7 +88,7 @@ namespace CarRentalApp.Controls
             this.isEvergineInitialized = true;
         }
 
-        static void ConfigureGraphicsContext(global::Evergine.Framework.Application application, Surface surface)
+        private static void ConfigureGraphicsContext(global::Evergine.Framework.Application application, Surface surface)
         {
             GraphicsContext graphicsContext = new global::Evergine.Metal.MTLGraphicsContext();
             graphicsContext.CreateDevice();

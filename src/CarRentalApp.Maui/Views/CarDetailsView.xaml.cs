@@ -7,13 +7,19 @@ public partial class CarDetailsView : ContentPage
 {
     readonly MyApplication _evergineApplication;
 
-    public CarDetailsView(CarDetailsViewModel viewModel)
+    public CarDetailsView()
 	{
 		InitializeComponent();
 
-		BindingContext = viewModel;
-
         _evergineApplication = new MyApplication();
         EvergineView.Application = _evergineApplication;
+		BindingContext = new CarDetailsViewModel();
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        EvergineView.Handler.DisconnectHandler();
     }
 }
