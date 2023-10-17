@@ -41,7 +41,6 @@
             </Style>
 
             <Style x:Key="EvergineViewStyle" TargetType="evergine:EvergineView">
-                <Setter Property="BackgroundColor" Value="LightGray" />
                 <Setter Property="MinimumHeightRequest" Value="100" />
                 <Setter Property="Margin" Value="0, 12" />
             </Style>

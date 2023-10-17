@@ -1,7 +1,8 @@
+!Evergine.Common.ProjectModel,Evergine.Common
 Packages:
   - Id: Evergine.Core
     LocalPath: null
-    Version: 2023.9.28.510
+    Version: 2023.9.28.511
 Profiles:
   - AdditionalEffectTechniqueCombinations: SHADOW_SUPPORTED-SHADOWFILTER3,SHADOW_SUPPORTED-SHADOWFILTER3-POINT_LIGHT,SHADOW_SUPPORTED-SHADOWFILTER3-SPOT_LIGHT,SHADOW_SUPPORTED-SHADOWFILTER3-POINT_LIGHT-SPOT_LIGHT
     AlphaCompressionFormat: BC3_UNorm

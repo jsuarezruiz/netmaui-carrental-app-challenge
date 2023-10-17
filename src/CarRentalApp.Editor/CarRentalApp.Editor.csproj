@@ -3,10 +3,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.Common" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Components" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Framework" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Editor.Extension" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Common" Version="2023.9.28.511" />
+    <PackageReference Include="Evergine.Components" Version="2023.9.28.511" />
+    <PackageReference Include="Evergine.Framework" Version="2023.9.28.511" />
+    <PackageReference Include="Evergine.Editor.Extension" Version="2023.9.28.511" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarRentalApp\CarRentalApp.csproj" />

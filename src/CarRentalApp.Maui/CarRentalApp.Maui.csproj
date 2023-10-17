@@ -1,155 +1,135 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
-		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
-
-		<!-- Note for MacCatalyst:
+  <PropertyGroup>
+    <TargetFrameworks>net7.0-android;net7.0-ios;</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+    <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+    <!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+    <!-- Note for MacCatalyst:
 		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
 		When specifying both architectures, use the plural <RuntimeIdentifiers> instead of the singular <RuntimeIdentifer>.
 		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
-		<!-- ex. <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
-
-		<OutputType>Exe</OutputType>
-		<RootNamespace>CarRentalApp.Maui</RootNamespace>
-		<UseMaui>true</UseMaui>
-		<SingleProject>true</SingleProject>
-		<ImplicitUsings>enable</ImplicitUsings>
-
-		<!-- Display name -->
-		<ApplicationTitle>CarRentalApp</ApplicationTitle>
-
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.carrentalapp</ApplicationId>
-
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
-
-		<!-- Evergine -->
-		<EvergineAssetContent>$(SolutionDir)Content</EvergineAssetContent>
-		<EvergineProjectFilePath>$(SolutionDir)CarRentalApp.weproj</EvergineProjectFilePath>
-		
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
-
-		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\Images\back_icon.png" />
-	  <None Remove="Resources\Images\bmw_logo.png" />
-	  <None Remove="Resources\Images\calendar_icon.png" />
-	  <None Remove="Resources\Images\dollar_icon.png" />
-	  <None Remove="Resources\Images\engine_icon.png" />
-	  <None Remove="Resources\Images\home_icon.png" />
-	  <None Remove="Resources\Images\menu_icon.png" />
-	  <None Remove="Resources\Images\notification_icon.png" />
-	  <None Remove="Resources\Images\profile_icon.png" />
-	  <None Remove="Resources\Images\search_icon.png" />
-	  <None Remove="Resources\Images\seat_icon.png" />
-	  <None Remove="Resources\Images\settings_icon.png" />
-	  <None Remove="Resources\Images\speed_icon.png" />
-	  <None Remove="Resources\Images\tesla_model_3.png" />
-	  <None Remove="Resources\Images\tesla_model_x.png" />
-	  <None Remove="Resources\Images\ticket_icon.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\CarRentalApp\CarRentalApp.csproj" />
-	</ItemGroup>
-
-	<!-- Build Properties must be defined within these property groups to ensure successful publishing
+    <!-- ex. <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CarRentalApp.Maui</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Display name -->
+    <ApplicationTitle>CarRentalApp</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.carrentalapp</ApplicationId>
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <!-- Evergine -->
+    <EvergineAssetContent>$(SolutionDir)Content</EvergineAssetContent>
+    <EvergineProjectFilePath>$(SolutionDir)CarRentalApp.weproj</EvergineProjectFilePath>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+    <!-- Images -->
+    <MauiImage Include="Resources\Images\*" />
+    <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Fonts\*" />
+    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+    <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Images\back_icon.png" />
+    <None Remove="Resources\Images\bmw_logo.png" />
+    <None Remove="Resources\Images\calendar_icon.png" />
+    <None Remove="Resources\Images\dollar_icon.png" />
+    <None Remove="Resources\Images\engine_icon.png" />
+    <None Remove="Resources\Images\home_icon.png" />
+    <None Remove="Resources\Images\menu_icon.png" />
+    <None Remove="Resources\Images\notification_icon.png" />
+    <None Remove="Resources\Images\profile_icon.png" />
+    <None Remove="Resources\Images\search_icon.png" />
+    <None Remove="Resources\Images\seat_icon.png" />
+    <None Remove="Resources\Images\settings_icon.png" />
+    <None Remove="Resources\Images\speed_icon.png" />
+    <None Remove="Resources\Images\tesla_model_3.png" />
+    <None Remove="Resources\Images\tesla_model_x.png" />
+    <None Remove="Resources\Images\ticket_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarRentalApp\CarRentalApp.csproj" />
+  </ItemGroup>
+  <!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
   <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Debug.plist</CodesignEntitlements>
   </PropertyGroup>
-
   <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Release'">
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Release.plist</CodesignEntitlements>
     <UseHardenedRuntime>true</UseHardenedRuntime>
   </PropertyGroup>
-
-	<Choose>
-		<When Condition="'$(TargetFramework)' == 'net7.0-android'">
-			<PropertyGroup>
-				<EvergineProfileName>#MAUI#Android</EvergineProfileName>
-			</PropertyGroup>
-			<ItemGroup>
-				<PackageReference Include="Evergine.AndroidView" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Bindings.Vulkan" Version="2023.7.9.27" />
-				<PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.LibBulletc.Natives" Version="2023.9.22.18" />
-				<PackageReference Include="Evergine.OpenAL" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets.Maui" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Vulkan" Version="2023.9.28.510" />
-			</ItemGroup>
-			<ItemGroup>
-				<TrimmerRootDescriptor Include="Platforms\Android\linker.xml" />
-			</ItemGroup>
-		</When>
-		<When Condition="'$(TargetFramework)' == 'net7.0-ios'">
-			<PropertyGroup>
-				<EvergineProfileName>#MAUI#iOS</EvergineProfileName>
-				<!--
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net7.0-android'">
+      <PropertyGroup>
+        <EvergineProfileName>#MAUI#Android</EvergineProfileName>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Include="Evergine.AndroidView" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Bindings.Vulkan" Version="2023.7.9.27" />
+        <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.LibBulletc.Natives" Version="2023.9.22.18" />
+        <PackageReference Include="Evergine.OpenAL" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets.Maui" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Vulkan" Version="2023.9.28.511" />
+      </ItemGroup>
+      <ItemGroup>
+        <TrimmerRootDescriptor Include="Platforms\Android\linker.xml" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net7.0-ios'">
+      <PropertyGroup>
+        <EvergineProfileName>#MAUI#iOS</EvergineProfileName>
+        <!--
 					This workarounds the Metal and Maui errors
 					arg store type not yet supported (Metal) https://github.com/dotnet/runtime/issues/82976
 					Maui Release IOS XamlParseException https://github.com/dotnet/maui/issues/12519
 				-->
-				<MtouchInterpreter>-all</MtouchInterpreter>
-			</PropertyGroup>
-			<ItemGroup>
-				<PackageReference Include="Evergine.iOSView" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Metal" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets.iOS" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.LibBulletc.Natives" Version="2023.9.22.18" />
-			</ItemGroup>
-		</When>
-		<When Condition="'$(TargetFramework)' == 'net7.0-windows10.0.19041.0'">
-			<PropertyGroup>
-				<EvergineProfileName>#MAUI#Windows</EvergineProfileName>
-			</PropertyGroup>
-			<ItemGroup>
-				<PackageReference Include="Evergine.CodeScenes" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.DirectX11" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.XAudio2" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.Targets.Maui" Version="2023.9.28.510" />
-				<PackageReference Include="Evergine.WinUI" Version="2023.9.28.510" />
-			</ItemGroup>
-		</When>
-	</Choose>
-	
+        <MtouchInterpreter>-all</MtouchInterpreter>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Include="Evergine.iOSView" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Metal" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets.iOS" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.LibBulletc.Natives" Version="2023.9.22.18" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net7.0-windows10.0.19041.0'">
+      <PropertyGroup>
+        <EvergineProfileName>#MAUI#Windows</EvergineProfileName>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Include="Evergine.CodeScenes" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.Targets.Maui" Version="2023.9.28.511" />
+        <PackageReference Include="Evergine.WinUI" Version="2023.9.28.511" />
+      </ItemGroup>
+    </When>
+  </Choose>
 </Project>
