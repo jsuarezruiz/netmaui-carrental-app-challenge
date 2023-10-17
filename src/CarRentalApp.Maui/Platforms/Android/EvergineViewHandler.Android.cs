@@ -1,18 +1,15 @@
-using CarRentalApp.Controls;
 using Evergine.AndroidView;
 using Evergine.Common.Graphics;
 using Evergine.Framework.Services;
 using Evergine.Vulkan;
-using CarRentalApp;
 using Microsoft.Maui.Handlers;
-using CarRentalApp;
 
 namespace CarRentalApp.Controls
 {
     public partial class EvergineViewHandler : ViewHandler<EvergineView, AndroidSurfaceView>
     {
-        AndroidSurface androidSurface;
-        AndroidWindowsSystem windowsSystem;
+        private AndroidSurface androidSurface;
+        private AndroidWindowsSystem windowsSystem;
 
         public EvergineViewHandler(IPropertyMapper mapper, CommandMapper commandMapper = null)
            : base(mapper, commandMapper)
@@ -35,14 +32,14 @@ namespace CarRentalApp.Controls
             view.Application.Container.RegisterInstance(this.windowsSystem);
 
             // Creates XAudio device
-            var xaudio = new Evergine.OpenAL.ALAudioDevice();
+            var xaudio = new global::Evergine.OpenAL.ALAudioDevice();
             view.Application.Container.RegisterInstance(xaudio);
 
             System.Diagnostics.Stopwatch clockTimer = System.Diagnostics.Stopwatch.StartNew();
-            windowsSystem.Run(
+            this.windowsSystem.Run(
             () =>
             {
-                ConfigureGraphicsContext(view.Application as MyApplication, this.androidSurface);
+                this.ConfigureGraphicsContext(view.Application as CarRentalApp.MyApplication, this.androidSurface);
                 view.Application.Initialize();
             },
             () =>
@@ -57,12 +54,12 @@ namespace CarRentalApp.Controls
 
         protected override AndroidSurfaceView CreatePlatformView()
         {
-            windowsSystem = new AndroidWindowsSystem(Context);
-            androidSurface = windowsSystem.CreateSurface(0, 0) as AndroidSurface;
-            return androidSurface.NativeSurface;
+            this.windowsSystem = new AndroidWindowsSystem(this.Context);
+            this.androidSurface = this.windowsSystem.CreateSurface(0, 0) as AndroidSurface;
+            return this.androidSurface.NativeSurface;
         }
 
-        void ConfigureGraphicsContext(MyApplication application, Surface surface)
+        private void ConfigureGraphicsContext(MyApplication application, Surface surface)
         {
             var graphicsContext = new VKGraphicsContext();
             graphicsContext.CreateDevice();
@@ -83,7 +80,7 @@ namespace CarRentalApp.Controls
             swapChain.VerticalSync = true;
 
             var graphicsPresenter = application.Container.Resolve<GraphicsPresenter>();
-            var firstDisplay = new Evergine.Framework.Graphics.Display(surface, swapChain);
+            var firstDisplay = new global::Evergine.Framework.Graphics.Display(surface, swapChain);
             graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
 
             application.Container.RegisterInstance(graphicsContext);
