@@ -5,6 +5,7 @@ using Evergine.Common.Input.Mouse;
 using Evergine.Common.Input.Pointer;
 using Evergine.Framework;
 using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
 using Evergine.Mathematics;
 using System;
 using System.Linq;
@@ -52,6 +53,15 @@ namespace CarRentalApp.Behaviors
         /// </summary>
         private bool isDirty;
 
+        [BindComponent(source: BindComponentSource.ChildrenSkipOwner)]
+        private Camera3D camera3D;
+
+
+        [BindService]
+        private GraphicsPresenter graphicsPresenter;
+
+        private Display display;
+
         /// <summary>
         /// The current mouse state.
         /// </summary>
@@ -96,17 +106,29 @@ namespace CarRentalApp.Behaviors
         {
             base.OnActivated();
 
-            var display = this.Owner.Scene.Managers.RenderManager.ActiveCamera3D?.Display;
-            if (display != null)
+            this.RefreshDisplay();
+        }
+
+        private void RefreshDisplay()
+        {
+            this.display = this.camera3D.Display;
+            if (this.display != null)
             {
-                this.mouseDispatcher = display.MouseDispatcher;
-                this.touchDispatcher = display.TouchDispatcher;
+                this.mouseDispatcher = this.display.MouseDispatcher;
+                this.touchDispatcher = this.display.TouchDispatcher;
             }
         }
 
         /// <inheritdoc/>
         protected override void Update(TimeSpan gameTime)
         {
+            this.graphicsPresenter.TryGetDisplay("DefaultDisplay", out var presenterDisplay);
+            if (presenterDisplay != this.display)
+            {
+                this.camera3D.DisplayTagDirty = true;
+                this.RefreshDisplay();
+            };
+
             this.HandleInput();
 
             if (this.isDirty)
