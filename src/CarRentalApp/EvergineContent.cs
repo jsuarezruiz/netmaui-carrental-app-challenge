@@ -335,6 +335,9 @@ namespace CarRentalApp
             /// <summary> Asset Path (Effects/AtmosphericQuadEffect.wefx) </summary>
             public static readonly Guid AtmosphericQuadEffect = new Guid("d68b16ac-1b98-4b1a-95f6-eb39a41b70ec");
             
+            /// <summary> Asset Path (Effects/BackgroundImageEffect.wefx) </summary>
+            public static readonly Guid BackgroundImageEffect = new Guid("5d9b7441-7fcd-4167-9dd4-05e6dce235e7");
+            
             /// <summary> Asset Path (Effects/BillboardEffect.wefx) </summary>
             public static readonly Guid BillboardEffect = new Guid("dbb1f60a-82ad-40fc-8fbb-7b85caa6de0a");
             
@@ -358,9 +361,6 @@ namespace CarRentalApp
             
             /// <summary> Asset Path (Effects/SkyboxEffect.wefx) </summary>
             public static readonly Guid SkyboxEffect = new Guid("dd86a555-371c-4c72-8cf3-c32d5219af74");
-            
-            /// <summary> Asset Path (Effects/SpriteBatchEffect.wefx) </summary>
-            public static readonly Guid SpriteBatchEffect = new Guid("deb1f60a-82ad-40fc-8fbb-7b85caa6de0a");
             
             /// <summary> Asset Path (Effects/StandardEffect.wefx) </summary>
             public static readonly Guid StandardEffect = new Guid("daa1f60a-82ad-40fc-8fbb-7b85caa6de0a");
