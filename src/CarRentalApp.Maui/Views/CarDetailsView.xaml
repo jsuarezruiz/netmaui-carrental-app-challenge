@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<ContentPage
+    x:Class="CarRentalApp.Views.CarDetailsView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="CarRentalApp.Views.CarDetailsView"
     xmlns:evergine="clr-namespace:CarRentalApp.Controls"
-    Shell.NavBarIsVisible="False"
+    Title="Car Details"
     Background="{StaticResource Gray2}"
-    Title="Car Details">
+    Shell.NavBarIsVisible="False">
     <ContentPage.Resources>
         <ResourceDictionary>
 
@@ -41,7 +41,6 @@
             </Style>
 
             <Style x:Key="EvergineViewStyle" TargetType="evergine:EvergineView">
-                <Setter Property="BackgroundColor" Value="LightGray" />
                 <Setter Property="MinimumHeightRequest" Value="100" />
                 <Setter Property="Margin" Value="0, 12" />
             </Style>
@@ -110,9 +109,9 @@
             <Style x:Key="PriceBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24, 24, 0, 0" />
                 <Setter Property="Background" Value="{StaticResource PriceBorderBackgroundColor}" />
-                <Setter Property="StrokeThickness" Value="0"/>
+                <Setter Property="StrokeThickness" Value="0" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
-                <Setter Property="Margin" Value="0, 36, 0, 0"/>
+                <Setter Property="Margin" Value="0, 36, 0, 0" />
             </Style>
 
             <Style x:Key="RentalDescriptionStyle" TargetType="Label">
@@ -134,168 +133,121 @@
 
             <Style x:Key="BookBorderStyle" TargetType="Border">
                 <Setter Property="StrokeShape" Value="RoundRectangle 24, 24, 0, 0" />
-                <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
-                <Setter Property="StrokeThickness" Value="0"/>
-                <Setter Property="MinimumHeightRequest" Value="150"/>
-                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="MinimumHeightRequest" Value="150" />
+                <Setter Property="Margin" Value="0" />
             </Style>
 
             <Style x:Key="BookButtonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource Accent}"/>
-                <Setter Property="TextColor" Value="{StaticResource White}"/>
-                <Setter Property="CornerRadius" Value="24"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="HeightRequest" Value="48"/>
-                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+                <Setter Property="CornerRadius" Value="24" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="WidthRequest" Value="300" />
             </Style>
 
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid
-        RowDefinitions="Auto, 1.5*, 3*">
-        <!-- NAVBAR -->
-        <Grid
-            ColumnDefinitions="Auto, *, Auto"
-            Style="{StaticResource NavBarLayoutStyle}">
-            <Border
-                Style="{StaticResource NavBarButtonStyle}">
+    <Grid RowDefinitions="Auto, 1.5*, 3*">
+        <!--  NAVBAR  -->
+        <Grid ColumnDefinitions="Auto, *, Auto" Style="{StaticResource NavBarLayoutStyle}">
+            <Border Style="{StaticResource NavBarButtonStyle}">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer
-                        Command="{Binding GoBackCommand}"/>
+                    <TapGestureRecognizer Command="{Binding GoBackCommand}" />
                 </Border.GestureRecognizers>
-                <Image 
-                    Source="back_icon.png"/>
+                <Image Source="back_icon.png" />
             </Border>
-            <Label 
+            <Label
                 Grid.Column="1"
-                Text="Car Details"
-                Style="{StaticResource TitleStyle}"/>
-            <Border
-                Grid.Column="2"
-                Style="{StaticResource NavBarButtonStyle}">
-                <Image 
-                    Source="menu_icon.png"/>
+                Style="{StaticResource TitleStyle}"
+                Text="Car Details" />
+            <Border Grid.Column="2" Style="{StaticResource NavBarButtonStyle}">
+                <Image Source="menu_icon.png" />
             </Border>
         </Grid>
-        <!-- 3D CONTENT -->
+        <!--  3D CONTENT  -->
         <evergine:EvergineView
-            Grid.Row="1"
             x:Name="EvergineView"
-            Style="{StaticResource EvergineViewStyle}"/>
-        <!-- DETAILS -->
-        <Grid
-            Grid.Row="2">
-            <Border 
-                Style="{StaticResource DetailsBorderStyle}"/>
-            <Grid
-                RowDefinitions="Auto, Auto, Auto, Auto, *">
-                <Label 
-                    Text="{Binding Car.Name}"
-                    Style="{StaticResource DetailsTitleStyle}"/>
-                <Label 
+            Grid.Row="1"
+            Style="{StaticResource EvergineViewStyle}" />
+        <!--  DETAILS  -->
+        <Grid Grid.Row="2">
+            <Border Style="{StaticResource DetailsBorderStyle}" />
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, *">
+                <Label Style="{StaticResource DetailsTitleStyle}" Text="{Binding Car.Name}" />
+                <Label
                     Grid.Row="1"
-                    Text="A car with high specs that are rented at an affordable price"
-                    Style="{StaticResource DetailsDescriptionStyle}"/>
-                <BoxView 
-                    Grid.Row="2"
-                    Style="{StaticResource SeparatorStyle}"/>
-                <Grid
-                    Grid.Row="3"
-                    RowDefinitions="Auto, *">
-                    <Label
-                        Text="Specification"
-                        Style="{StaticResource SpecificationSectionStyle}"/>
+                    Style="{StaticResource DetailsDescriptionStyle}"
+                    Text="A car with high specs that are rented at an affordable price" />
+                <BoxView Grid.Row="2" Style="{StaticResource SeparatorStyle}" />
+                <Grid Grid.Row="3" RowDefinitions="Auto, *">
+                    <Label Style="{StaticResource SpecificationSectionStyle}" Text="Specification" />
                     <Grid
                         Grid.Row="1"
                         ColumnDefinitions="*, *, *"
                         Style="{StaticResource PaddingLayoutStyle}">
-                        <Border
-                            Style="{StaticResource SpecificationBorderStyle}">
-                            <Grid
-                                RowDefinitions="*, Auto, Auto"
-                                Padding="12">
-                                <Border
-                                    Style="{StaticResource SpecificationIconBorderStyle}">
-                                    <Image
-                                        Source="seat_icon.png"/>
+                        <Border Style="{StaticResource SpecificationBorderStyle}">
+                            <Grid Padding="12" RowDefinitions="*, Auto, Auto">
+                                <Border Style="{StaticResource SpecificationIconBorderStyle}">
+                                    <Image Source="seat_icon.png" />
                                 </Border>
-                                <Label 
+                                <Label
                                     Grid.Row="1"
-                                    Text="Capacity"
-                                    Style="{StaticResource SpecificationTitleStyle}"/>
-                                <Label 
+                                    Style="{StaticResource SpecificationTitleStyle}"
+                                    Text="Capacity" />
+                                <Label
                                     Grid.Row="2"
-                                    Text="4 seats"
-                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"
+                                    Text="4 seats" />
                             </Grid>
                         </Border>
-                        <Border
-                            Grid.Column="1"
-                            Style="{StaticResource SpecificationBorderStyle}">
-                            <Grid
-                                RowDefinitions="*, Auto, Auto"
-                                Padding="12">
-                                <Border
-                                    Style="{StaticResource SpecificationIconBorderStyle}">
-                                    <Image
-                                        Source="engine_icon.png"/>
+                        <Border Grid.Column="1" Style="{StaticResource SpecificationBorderStyle}">
+                            <Grid Padding="12" RowDefinitions="*, Auto, Auto">
+                                <Border Style="{StaticResource SpecificationIconBorderStyle}">
+                                    <Image Source="engine_icon.png" />
                                 </Border>
-                                <Label 
+                                <Label
                                     Grid.Row="1"
-                                    Text="Engine Out"
-                                    Style="{StaticResource SpecificationTitleStyle}"/>
-                                <Label 
+                                    Style="{StaticResource SpecificationTitleStyle}"
+                                    Text="Engine Out" />
+                                <Label
                                     Grid.Row="2"
-                                    Text="600 HP"
-                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"
+                                    Text="600 HP" />
                             </Grid>
                         </Border>
-                        <Border
-                            Grid.Column="2"
-                            Style="{StaticResource SpecificationBorderStyle}">
-                            <Grid
-                                RowDefinitions="*, Auto, Auto"
-                                Padding="12">
-                                <Border
-                                    Style="{StaticResource SpecificationIconBorderStyle}">
-                                    <Image
-                                        Source="speed_icon.png"/>
+                        <Border Grid.Column="2" Style="{StaticResource SpecificationBorderStyle}">
+                            <Grid Padding="12" RowDefinitions="*, Auto, Auto">
+                                <Border Style="{StaticResource SpecificationIconBorderStyle}">
+                                    <Image Source="speed_icon.png" />
                                 </Border>
-                                <Label 
+                                <Label
                                     Grid.Row="1"
-                                    Text="Max Speed"
-                                    Style="{StaticResource SpecificationTitleStyle}"/>
-                                <Label 
+                                    Style="{StaticResource SpecificationTitleStyle}"
+                                    Text="Max Speed" />
+                                <Label
                                     Grid.Row="2"
-                                    Text="400 km/h"
-                                    Style="{StaticResource SpecificationDescriptionStyle}"/>
+                                    Style="{StaticResource SpecificationDescriptionStyle}"
+                                    Text="400 km/h" />
                             </Grid>
                         </Border>
                     </Grid>
                 </Grid>
-                <Grid
-                    Grid.Row="4">
-                    <Border
-                        Style="{StaticResource PriceBorderStyle}">
-                        <Grid
-                            RowDefinitions="Auto, *">
-                            <Grid
-                                ColumnDefinitions="Auto, *">
-                                <Label 
-                                    Text="Rental Price"
-                                    Style="{StaticResource RentalDescriptionStyle}"/>
-                                <Label 
+                <Grid Grid.Row="4">
+                    <Border Style="{StaticResource PriceBorderStyle}">
+                        <Grid RowDefinitions="Auto, *">
+                            <Grid ColumnDefinitions="Auto, *">
+                                <Label Style="{StaticResource RentalDescriptionStyle}" Text="Rental Price" />
+                                <Label
                                     Grid.Column="1"
-                                    Text="$30/hour"
-                                    Style="{StaticResource RentalPriceStyle}"/>
+                                    Style="{StaticResource RentalPriceStyle}"
+                                    Text="$30/hour" />
                             </Grid>
-                            <Border
-                                Grid.Row="1"
-                                Style="{StaticResource BookBorderStyle}">
-                                <Button 
-                                    Text="Book Car"
-                                    Style="{StaticResource BookButtonStyle}"/>
+                            <Border Grid.Row="1" Style="{StaticResource BookBorderStyle}">
+                                <Button Style="{StaticResource BookButtonStyle}" Text="Book Car" />
                             </Border>
                         </Grid>
                     </Border>
