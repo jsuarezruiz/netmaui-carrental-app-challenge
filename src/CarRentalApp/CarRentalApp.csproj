@@ -6,13 +6,13 @@
     <GenerateEvergineScenesCode>True</GenerateEvergineScenesCode>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.Common" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Components" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Framework" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Mathematics" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Platform" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Bullet" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.CodeScenes" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Common" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Components" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Framework" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Mathematics" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Platform" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Bullet" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Targets" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.CodeScenes" Version="2023.9.28.1837" />
   </ItemGroup>
 </Project>

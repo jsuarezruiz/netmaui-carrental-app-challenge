@@ -5,12 +5,12 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Forms" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Forms" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Targets" Version="2023.9.28.1837" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2023.9.28.1837" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarRentalApp\CarRentalApp.csproj" />

@@ -1,18 +1,18 @@
-using CarRentalApp.Controls;
 using Evergine.AndroidView;
 using Evergine.Common.Graphics;
 using Evergine.Framework.Services;
 using Evergine.Vulkan;
-using CarRentalApp;
 using Microsoft.Maui.Handlers;
-using CarRentalApp;
 
 namespace CarRentalApp.Controls
 {
     public partial class EvergineViewHandler : ViewHandler<EvergineView, AndroidSurfaceView>
     {
-        AndroidSurface androidSurface;
-        AndroidWindowsSystem windowsSystem;
+        private AndroidSurface androidSurface;
+        private AndroidWindowsSystem windowsSystem;
+        private static bool isEvergineInitialized;
+        private static VKGraphicsContext graphicsContext;
+        private static SwapChain swapChain;
 
         public EvergineViewHandler(IPropertyMapper mapper, CommandMapper commandMapper = null)
            : base(mapper, commandMapper)
@@ -31,19 +31,35 @@ namespace CarRentalApp.Controls
                 return;
             }
 
-            // Register Windows system
-            view.Application.Container.RegisterInstance(this.windowsSystem);
+            if (!isEvergineInitialized)
+            {
+                // Register Windows system
+                view.Application.Container.RegisterInstance(windowsSystem);
 
-            // Creates XAudio device
-            var xaudio = new Evergine.OpenAL.ALAudioDevice();
-            view.Application.Container.RegisterInstance(xaudio);
+                // Creates XAudio device
+                var xaudio = new global::Evergine.OpenAL.ALAudioDevice();
+                view.Application.Container.RegisterInstance(xaudio);
+            }
+            else
+            {
+                view.Application.Container.Unregister<AndroidWindowsSystem>();
+                view.Application.Container.RegisterInstance(windowsSystem);
+            }
 
             System.Diagnostics.Stopwatch clockTimer = System.Diagnostics.Stopwatch.StartNew();
             windowsSystem.Run(
             () =>
             {
-                ConfigureGraphicsContext(view.Application as MyApplication, this.androidSurface);
-                view.Application.Initialize();
+                if (!isEvergineInitialized)
+                {
+                    this.ConfigureGraphicsContext(view.Application as MyApplication, androidSurface);
+                    view.Application.Initialize();
+                    isEvergineInitialized = true;
+                }
+                else
+                {
+                    this.ConfigureGraphicsContext(view.Application as MyApplication, androidSurface);
+                }
             },
             () =>
             {
@@ -64,8 +80,12 @@ namespace CarRentalApp.Controls
 
         void ConfigureGraphicsContext(MyApplication application, Surface surface)
         {
-            var graphicsContext = new VKGraphicsContext();
-            graphicsContext.CreateDevice();
+            if (graphicsContext == null)
+            {
+                graphicsContext = new VKGraphicsContext();
+                graphicsContext.CreateDevice();
+            }
+
             SwapChainDescription swapChainDescription = new SwapChainDescription()
             {
                 SurfaceInfo = surface.SurfaceInfo,
@@ -79,14 +99,22 @@ namespace CarRentalApp.Controls
                 IsWindowed = true,
                 RefreshRate = 60,
             };
-            var swapChain = graphicsContext.CreateSwapChain(swapChainDescription);
+            swapChain = graphicsContext.CreateSwapChain(swapChainDescription);
             swapChain.VerticalSync = true;
 
             var graphicsPresenter = application.Container.Resolve<GraphicsPresenter>();
-            var firstDisplay = new Evergine.Framework.Graphics.Display(surface, swapChain);
-            graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
+            var firstDisplay = new global::Evergine.Framework.Graphics.Display(surface, swapChain);
 
-            application.Container.RegisterInstance(graphicsContext);
+            if (!isEvergineInitialized)
+            {
+                graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
+                application.Container.RegisterInstance(graphicsContext);
+            }
+            else
+            {
+                graphicsPresenter.RemoveDisplay("DefaultDisplay");
+                graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
+            }
 
             surface.OnScreenSizeChanged += (_, args) =>
             {
