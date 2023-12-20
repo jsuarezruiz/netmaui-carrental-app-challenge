@@ -19,7 +19,5 @@ public partial class CarDetailsView : ContentPage
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
-
-        EvergineView.Handler.DisconnectHandler();
     }
 }

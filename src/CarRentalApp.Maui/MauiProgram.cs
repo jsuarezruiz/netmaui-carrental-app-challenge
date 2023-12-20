@@ -23,6 +23,7 @@ namespace CarRentalApp
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<CarDetailsView>();
             builder.Services.AddSingleton<CarService>();
             builder.Services.AddSingleton<HomeView>();
             builder.Services.AddSingleton<HomeViewModel>();
